@@ -1,5 +1,7 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
+
+
 def welcome_note():
     """
     Welcome note and get name input from the user.
@@ -16,12 +18,17 @@ def welcome_note():
 welcome_note()
 
 def game_choice():
-    rules_choice = input("For Game Rules enter R otherwise enter P to Play: ")
+    """
+    Give choice to user to display rules.
+    They could be a returning player.
+    """
+    rules_choice = input("For Game Rules enter R otherwise enter P to Play: ").lower()
     
-    if rules_choice == "R":
+    if rules_choice == "r":
         print("How to Play....")
+        print("Let's Begin!")
 
-    elif rules_choice == "P":
+    elif rules_choice == "p":
         print("Let's Begin!")
 
     else:
@@ -29,6 +36,12 @@ def game_choice():
         game_choice()
 
 game_choice()
+
+def start_game():
+    guess = input("Please Enter your guess: ")
+
+start_game()
+
 
 
 

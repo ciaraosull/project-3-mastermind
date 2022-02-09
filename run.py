@@ -11,11 +11,14 @@ def welcome_note():
     print("Crack the Code to Win!")
     print("**********************\n")
 
-    name_data = input("Enter your name here to begin: ")
-    validate_data(name_data)
-    
-    print(f"\nWelcome {name_data}")
-    print("Have you got what it takes to break the code!\n")
+    while True:
+        name_data = input("Enter your name here to begin: ")
+        
+
+        if validate_data(name_data):
+            print(f"\nWelcome {name_data}")
+            print("Have you got what it takes to break the code!\n")
+            break
 
 def validate_data(name):
     """
@@ -23,9 +26,13 @@ def validate_data(name):
     """
     try:
         if name == "":
-            raise ValueError("Please input some type of name")
-    except ValueError as e:
-        print(f"Try again.  {e}")
+            raise ValueError("Please input some type of name\n")
+
+    except ValueError as error:
+        print(f"Try again.  {error}")
+        return False
+
+    return True
 
 
 welcome_note()
@@ -37,7 +44,7 @@ def game_choice():
     They could be a returning player.
     """
     rules_choice = input("For Game Rules enter R otherwise enter P to Play: ").lower()
-    
+
     if rules_choice == "r":
         print("How to Play....")
         print("Let's Begin!")

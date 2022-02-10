@@ -1,6 +1,6 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
-def welcome_note():
+def get_name():
     """
     Welcome note and get name input from the user.
     """
@@ -33,7 +33,7 @@ def validate_data(name):
     return True
 
 
-welcome_note()
+name = get_name()
 
 
 def game_choice():

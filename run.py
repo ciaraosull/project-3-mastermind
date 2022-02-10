@@ -33,7 +33,7 @@ def validate_data(name):
     return True
 
 
-name = get_name()
+get_name()
 
 
 def game_choice():
@@ -58,6 +58,9 @@ def game_choice():
 
 game_choice()
 
+# generate random code here?
+# calculate how many attemps left.  If over 10 then Game over
+# if attemps under 10 then request user guess in start_game function
 
 def start_game():
     """
@@ -65,5 +68,19 @@ def start_game():
     """
     guess = input("Please Enter your guess: ")
 
+    # validate guess
 
 start_game()
+
+    # calculate if guess is correct. If it is go to winner message
+    #if not correct take away an attempt
+    # calculate code hint
+    # back to start game for user next guess
+
+    #winner message. go to play again or quit goodbye message
+    # game lost message. got to play again or goodby message
+
+    #winner message trigger if code guess is correct
+    #game lost message. trigger if attemps are over
+    #play again to back to start get_name
+    #quit then show goodbye message

@@ -62,6 +62,7 @@ game_choice()
 # calculate how many attemps left.  If over 10 then Game over
 # if attemps under 10 then request user guess in start_game function
 
+
 def start_game():
     """
     Start game to calculate the random code
@@ -70,17 +71,18 @@ def start_game():
 
     # validate guess
 
+
 start_game()
 
-    # calculate if guess is correct. If it is go to winner message
-    #if not correct take away an attempt
-    # calculate code hint
-    # back to start game for user next guess
+# calculate if guess is correct. If it is go to winner message
+# if not correct take away an attempt
+# calculate code hint
+# back to start game for user next guess
 
-    #winner message. go to play again or quit goodbye message
-    # game lost message. got to play again or goodby message
+# winner message. go to play again or quit goodbye message
+# game lost message. got to play again or goodby message
 
-    #winner message trigger if code guess is correct
-    #game lost message. trigger if attemps are over
-    #play again to back to start get_name
-    #quit then show goodbye message
+# winner message trigger if code guess is correct
+# game lost message. trigger if attemps are over
+# play again to back to start get_name
+# quit then show goodbye message

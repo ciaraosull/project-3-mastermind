@@ -1,5 +1,6 @@
 import random
 
+
 def get_name():
     """
     Welcome note and get name input from the user.

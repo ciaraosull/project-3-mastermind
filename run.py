@@ -64,7 +64,9 @@ def random_code():
     """
     generate random code here?
     """
-    print(random.randrange(1, 10))
+    secret_code = (random.randrange(1, 10))
+    print(f"The secret code is {secret_code}")
+    return secret_code
 
 
 random_code()
@@ -79,7 +81,8 @@ def start_game():
     Start game to calculate the random code
     """
     guess = input("Please Enter your guess:\n")
-    print(guess)
+    print(f"You guessed {guess}")
+
 
     # validate guess
 

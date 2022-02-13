@@ -1,5 +1,7 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
+import random
+
 def get_name():
     """
     Welcome note and get name input from the user.

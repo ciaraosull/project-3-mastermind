@@ -10,7 +10,7 @@ def get_name():
     print("**********************\n")
 
     while True:
-        name_data = input("Enter your name here to begin: ")
+        name_data = input("Enter your name here to begin:\n")
 
         if validate_data(name_data):
             print(f"\nWelcome {name_data}")
@@ -42,7 +42,7 @@ def game_choice():
     They could be a returning player.
     """
     rules_choice = input(
-        "For Game Rules enter R otherwise enter P to Play: ").lower()
+        "For Game Rules enter R otherwise enter P to Play:\n").lower()
 
     if rules_choice == "r":
         print("How to Play....")
@@ -67,7 +67,7 @@ def start_game():
     """
     Start game to calculate the random code
     """
-    guess = input("Please Enter your guess: ")
+    guess = input("Please Enter your guess:\n")
 
     # validate guess
 

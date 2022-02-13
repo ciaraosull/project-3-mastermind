@@ -1,5 +1,3 @@
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
-
 import random
 
 def get_name():
@@ -60,7 +58,17 @@ def game_choice():
 
 game_choice()
 
-# generate random code here?
+
+def random_code():
+    """
+    generate random code here?
+    """
+    print(random.randrange(1, 10))
+
+
+random_code()
+
+
 # calculate how many attemps left.  If over 10 then Game over
 # if attemps under 10 then request user guess in start_game function
 
@@ -70,6 +78,7 @@ def start_game():
     Start game to calculate the random code
     """
     guess = input("Please Enter your guess:\n")
+    print(guess)
 
     # validate guess
 

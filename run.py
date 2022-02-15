@@ -73,7 +73,7 @@ def start_game():
     """
     Start game to calculate the random code
     """
-    guess = input("Please Enter your guess:\n")
+    guess = list(map(int, input("Please Enter your guess:").split(' ')))
     print(f"You guessed {guess}")
     return guess
 

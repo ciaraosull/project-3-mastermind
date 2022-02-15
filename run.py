@@ -89,6 +89,11 @@ def start_game():
 
 start_game()
 
+def main():
+    """
+    main function from which all functions run
+    """
+
 # calculate if guess is correct. If it is go to winner message
 # if not correct take away an attempt
 # calculate code hint

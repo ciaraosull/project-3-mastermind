@@ -96,10 +96,10 @@ def calculate_guess(user_guess, secret_code):
                 code_hint.append("*")
 
         for i in range(0, 4):
-            if user_guess == secret_code[i]:
-                    return i
-            matched_position = i
             if user_guess[i] in secret_code:
+                if user_guess == secret_code[i]:
+                    return i
+                matched_position = i
                 secret_code[matched_position] = '-'
                 user_guess[i] = ""
                 code_hint.append("&")

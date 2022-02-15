@@ -73,18 +73,45 @@ def start_game():
     """
     Start game to calculate the random code
     """
-    guess = list(map(int, input("Please Enter your guess:").split(' ')))
+    print("Your guess should contain 4 numbers between 1-9 sepatated by a space.\n")
+    guess = list(map(int, input("Please Enter your guess:\n").split(' ')))
     print(f"You guessed {guess}")
     return guess
 
-    # validate guess
+    # validate guess here
 
 def calculate_guess(user_guess, secret_code):
+    """
+    Compare user guess againts secret code and provides hints
+    """
+    code_hint = []
+
     if user_guess == secret_code:
         print("winner")
     else:
-        print("Looser")
-    return
+        for i in range(0, 4):
+            if user_guess[i]  == secret_code[i]:
+                secret_code[i] = "-"
+                user_guess[i] = ""
+                code_hint.append("*")
+
+        for i in range(0, 4):
+            if user_guess == secret_code[i]:
+                    return i
+            matched_position = i
+            if user_guess[i] in secret_code:
+                secret_code[matched_position] = '-'
+                user_guess[i] = ""
+                code_hint.append("&")
+        print(f"The Code Hint is {code_hint}")
+
+
+    #if user_guess == secret_code:
+     #   print("winner")
+    #elif
+    #else:
+     #   print("Looser")
+    #return
 
 
 def main():
@@ -93,7 +120,7 @@ def main():
     """
     get_name()
     game_choice()
-    secret_code = random_code(10)
+    secret_code = random_code(100)
     user_guess = start_game()
     calculate_guess(user_guess, secret_code)
 

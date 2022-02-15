@@ -54,13 +54,16 @@ def game_choice():
         game_choice()
 
 
-def random_code():
+def random_code(max_range):
     """
     generate random code here?
     """
-    secret_code = (random.randrange(1, 10))
-    print(f"The secret code is {secret_code}")
-    return secret_code
+    random_nums = []
+    for i in range(4):
+        random_nums.append(random.randint(1, max_range))
+    # for testing only to delete at end
+    print(f"The secret code is {random_nums}")
+    return random_nums
 
 
 # calculate how many attemps left.  If over 10 then Game over
@@ -72,9 +75,11 @@ def start_game():
     """
     guess = input("Please Enter your guess:\n")
     print(f"You guessed {guess}")
-
+    return guess
 
     # validate guess
+
+
 
 def main():
     """
@@ -82,8 +87,8 @@ def main():
     """
     get_name()
     game_choice()
-    random_code()
-    start_game()
+    secret_code = random_code(10)
+    user_guess = start_game()
 
 main()
 

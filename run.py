@@ -79,6 +79,12 @@ def start_game():
 
     # validate guess
 
+def calculate_guess(user_guess, secret_code):
+    if user_guess == secret_code:
+        print("winner")
+    else:
+        print("Looser")
+    return
 
 
 def main():
@@ -89,6 +95,7 @@ def main():
     game_choice()
     secret_code = random_code(10)
     user_guess = start_game()
+    calculate_guess(user_guess, secret_code)
 
 main()
 

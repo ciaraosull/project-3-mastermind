@@ -93,6 +93,9 @@ def main():
     """
     main function from which all functions run
     """
+    print("test")
+
+main()
 
 # calculate if guess is correct. If it is go to winner message
 # if not correct take away an attempt

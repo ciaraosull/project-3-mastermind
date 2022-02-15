@@ -34,9 +34,6 @@ def validate_data(name):
     return True
 
 
-get_name()
-
-
 def game_choice():
     """
     Give choice to user to display rules.
@@ -57,9 +54,6 @@ def game_choice():
         game_choice()
 
 
-game_choice()
-
-
 def random_code():
     """
     generate random code here?
@@ -69,12 +63,8 @@ def random_code():
     return secret_code
 
 
-random_code()
-
-
 # calculate how many attemps left.  If over 10 then Game over
 # if attemps under 10 then request user guess in start_game function
-
 
 def start_game():
     """
@@ -86,14 +76,14 @@ def start_game():
 
     # validate guess
 
-
-start_game()
-
 def main():
     """
-    main function from which all functions run
+    Run all program function
     """
-    print("test")
+    get_name()
+    game_choice()
+    random_code()
+    start_game()
 
 main()
 

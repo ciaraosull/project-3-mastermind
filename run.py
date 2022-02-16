@@ -56,7 +56,7 @@ def game_choice():
 
 def random_code(max_range):
     """
-    generate random code here?
+    generate random code here
     """
     random_nums = []
     for i in range(4):
@@ -131,6 +131,20 @@ def main():
     user_guess = start_game()
     calculate_guess(secret_code, user_guess)
     find_position(secret_code, user_guess)
+    guess_left = 9
+    while guess_left <= 9:
+        if guess_left == 0:
+            print("Sorry, No Guesses Left!")
+            print(f"The Secret Code was {secret_code}")
+            break
+            # put play_again() function here
+        else:
+            print(f"You have {guess_left} guesses left")
+            guess_left -= 1
+            user_guess = start_game()
+            calculate_guess(secret_code, user_guess)
+            find_position(secret_code, user_guess)
+
 
 
 main()

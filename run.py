@@ -61,8 +61,6 @@ def random_code(max_range):
     random_nums = []
     for i in range(4):
         random_nums.append(random.randint(1, max_range))
-    # for testing only to delete at end
-    print(f"The secret code is {random_nums}")
     return random_nums
 
 
@@ -71,9 +69,9 @@ def random_code(max_range):
 
 def start_game():
     """
-    Start game to calculate the random code
+    Start game for user guess
     """
-    print("Your guess should contain 4 numbers between 1-9 sepatated by a space.\n")
+    #print("Your guess should contain 4 numbers between 1-9 sepatated by a space.\n")
     guess = list(map(int, input("Please Enter your guess:\n").split(' ')))
     print(f"You guessed {guess}")
     return guess
@@ -92,26 +90,42 @@ def find_position(secret_code, user_guess):
 
 def calculate_guess(secret_code, user_guess):
     """
-    Compare user guess againts secret code and provides hints
+    Compare user guess againts secret code and provide hints
+    Handle Guess count
     """
-    code_hint = []
+    guess_left = 10
 
-    if user_guess == secret_code:
-        print("winner")
-    else:
-        for i in range(0, 4):
-            if user_guess[i] == secret_code[i]:
-                secret_code[i] = "-"
-                user_guess[i] = ""
-                code_hint.append("*")
+    while guess_left <= 10:
+        if guess_left == 0:
+            print("Sorry, No Guesses Left!")
+            print(f"The Secret Code was {secret_code}")
+            break
+            # put play_again() function here
+        else:
+            print(f"You have {guess_left} guesses left")
+            guess_left -= 1
 
-        for i in range(0, 4):
-            if user_guess[i] in secret_code:
-                matched_position = find_position(secret_code, user_guess[i])
-                secret_code[matched_position] = '-'
-                user_guess[i] = ""
-                code_hint.append("&")
-        print(f"The Code Hint is {code_hint}")
+            code_hint = []
+            guess = list(user_guess)
+            code = list(secret_code)
+
+            if guess == code:
+                print("winner")
+            else:
+                for i in range(0, 4):
+                    if guess[i] == code[i]:
+                        code[i] = "-"
+                        guess[i] = ""
+                        code_hint.append("*")
+
+                for i in range(0, 4):
+                    if guess[i] in code:
+                        matched_position = find_position(code, guess[i])
+                        code[matched_position] = '-'
+                        guess[i] = ""
+                        code_hint.append("&")
+                print(f"The Code Hint is {code_hint}")
+                start_game()
 
     #if user_guess == secret_code:
     #   print("winner")
@@ -128,24 +142,11 @@ def main():
     get_name()
     game_choice()
     secret_code = random_code(100)
+    # for testing only take away print at end
+    print(f"The secret code is {secret_code}")
     user_guess = start_game()
     calculate_guess(secret_code, user_guess)
     find_position(secret_code, user_guess)
-    guess_left = 9
-    while guess_left <= 9:
-        if guess_left == 0:
-            print("Sorry, No Guesses Left!")
-            print(f"The Secret Code was {secret_code}")
-            break
-            # put play_again() function here
-        else:
-            print(f"You have {guess_left} guesses left")
-            guess_left -= 1
-            user_guess = start_game()
-            calculate_guess(secret_code, user_guess)
-            find_position(secret_code, user_guess)
-
-
 
 main()
 

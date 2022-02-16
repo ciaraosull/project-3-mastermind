@@ -43,11 +43,18 @@ def game_choice():
         "For Game Rules enter R otherwise enter P to Play:\n").lower()
 
     if rules_choice == "r":
-        print("How to Play....")
-        print("Let's Begin!")
+        print("How to Play:")
+        print("You have 10 attemps to guess the secrect code")
+        print("The secret code is 4 numbers between 1-10")
+        print("Numbers may be repeated within the secret code!\n")
+        print("Code Hints:") 
+        print("* = correct number in correct position")
+        print("& = correct number in wrong position")
+        print("Code Hint symbols are not in order!\n")
+        print("Let's Begin!\n")
 
     elif rules_choice == "p":
-        print("Let's Begin!")
+        print("Let's Begin!\n")
 
     else:
         print("Sorry, not a valid response\n")

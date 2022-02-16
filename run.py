@@ -133,7 +133,7 @@ def main():
     """
     get_name()
     game_choice()
-    secret_code = random_code(100)
+    secret_code = random_code(10)
     # for testing only take away print at end
     print(f"The secret code is {secret_code}")
     user_guess = start_game()

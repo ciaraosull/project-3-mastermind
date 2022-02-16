@@ -81,7 +81,7 @@ def start_game():
     # validate guess here
 
 
-def matched_position(secret_code, user_guess):
+def find_position(secret_code, user_guess):
     """
     Finds the position of the matched numbers
     """
@@ -90,7 +90,7 @@ def matched_position(secret_code, user_guess):
             return i
 
 
-def calculate_guess(user_guess, secret_code):
+def calculate_guess(secret_code, user_guess):
     """
     Compare user guess againts secret code and provides hints
     """
@@ -107,9 +107,7 @@ def calculate_guess(user_guess, secret_code):
 
         for i in range(0, 4):
             if user_guess[i] in secret_code:
-                if user_guess == secret_code[i]:
-                    return i
-                matched_position = i
+                matched_position = find_position(secret_code, user_guess[i])
                 secret_code[matched_position] = '-'
                 user_guess[i] = ""
                 code_hint.append("&")
@@ -131,8 +129,8 @@ def main():
     game_choice()
     secret_code = random_code(100)
     user_guess = start_game()
-    calculate_guess(user_guess, secret_code)
-
+    calculate_guess(secret_code, user_guess)
+    find_position(secret_code, user_guess)
 
 
 main()

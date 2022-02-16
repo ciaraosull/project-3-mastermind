@@ -56,7 +56,7 @@ def game_choice():
 
 def random_code(max_range):
     """
-    generate random code here
+    Generate random secret code here
     """
     random_nums = []
     for i in range(4):
@@ -64,19 +64,15 @@ def random_code(max_range):
     return random_nums
 
 
-# calculate how many attemps left.  If over 10 then Game over
-# if attemps under 10 then request user guess in start_game function
-
 def start_game():
     """
     Start game for user guess
     """
-    #print("Your guess should contain 4 numbers between 1-9 sepatated by a space.\n")
     guess = list(map(int, input("Please Enter your guess:\n").split(' ')))
     print(f"You guessed {guess}")
     return guess
 
-    # validate guess here
+    # validate guess entry here
 
 
 def find_position(secret_code, user_guess):
@@ -106,11 +102,14 @@ def calculate_guess(secret_code, user_guess):
             guess_left -= 1
 
             code_hint = []
+            # puts user guess and secret code 
+            # back in a list to check against again
             guess = list(user_guess)
             code = list(secret_code)
 
             if guess == code:
-                print("winner")
+                print("Winner")
+                # play_again option to go here
             else:
                 for i in range(0, 4):
                     if guess[i] == code[i]:
@@ -127,13 +126,6 @@ def calculate_guess(secret_code, user_guess):
                 print(f"The Code Hint is {code_hint}")
                 start_game()
 
-    #if user_guess == secret_code:
-    #   print("winner")
-    # elif
-    # else:
-     #   print("Looser")
-    #return
-
 
 def main():
     """
@@ -148,16 +140,12 @@ def main():
     calculate_guess(secret_code, user_guess)
     find_position(secret_code, user_guess)
 
+
 main()
 
-# calculate if guess is correct. If it is go to winner message
-# if not correct take away an attempt
-# calculate code hint
-# back to start game for user next guess
 
 # winner message. go to play again or quit goodbye message
 # game lost message. got to play again or goodby message
-
 # winner message trigger if code guess is correct
 # game lost message. trigger if attemps are over
 # play again to back to start get_name

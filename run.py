@@ -103,7 +103,9 @@ def calculate_guess(secret_code, user_guess):
     code = list(secret_code)
 
     if guess == code:
-        print("Winner")
+        print("WINNER\n")
+        print("Play Again?\n")
+        main()
         # play_again option to go here
     else:
         for i in range(0, 4):

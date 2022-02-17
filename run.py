@@ -1,14 +1,21 @@
+# import random for generating random numbers for secret
 import random
+
+# import pyfiglet module for ascii art
+import pyfiglet
 
 
 def get_name():
     """
     Welcome note and get name input from the user.
     """
-    print("**********************")
-    print("      Mastermind")
-    print("Crack the Code to Win!")
-    print("**********************\n")
+
+    result = pyfiglet.figlet_format("Mastermind", font = "digital")
+    print(result)
+    # print("**********************")
+    # print("      Mastermind")
+    # print("Crack the Code to Win!")
+    # print("**********************\n")
 
     while True:
         name_data = input("Enter your name here to begin:\n")

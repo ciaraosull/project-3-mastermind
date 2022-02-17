@@ -21,7 +21,8 @@ A user wants to:
 This game takes these key reseach pieces and the users stories mentioned above into consideration to create a positive UX.  The users experience is discussed in more detail below with examples in the Design & Features Sections.
 
 ## Design
-    * Flow Chart Here
+    * Flow Chart
+    ![Flowchart](assets/images/flowchart.png)
 
     * ascii for title
 

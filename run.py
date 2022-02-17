@@ -57,9 +57,11 @@ def game_choice():
 
     if rules_choice == "r":
         print("How to Play:\n")
-        print("You have 10 attemps to guess the secrect code")
+        print("You have 10 attempts to guess the secret code")
         print("The secret code is 4 numbers between 1-10")
         print("Numbers may be repeated within the secret code!\n")
+        print("Please separate your 4 numbers by a space")
+        print("For example: 1 2 3 4\n")
         print("Code Hints:")
         print("* = correct number in correct position")
         print("& = correct number in wrong position")
@@ -89,7 +91,7 @@ def start_game():
     Start game for user guess
     """
     guess = list(map(int, input("Please Enter your guess:\n").split(' ')))
-    print(f"You guessed {guess}")
+    print(f"\nYou guessed {guess}")
     return guess
 
     # validate guess entry here
@@ -133,7 +135,7 @@ def calculate_guess(secret_code, user_guess):
                 code[matched_position] = '-'
                 guess[i] = ""
                 code_hint.append("&")
-    print(f"Code Hint: {code_hint}")
+    print(f"Code Hint: {code_hint}\n")
 
 
 def main():
@@ -154,7 +156,7 @@ def main():
             break
             # put play_again() function here
         else:
-            print(f"You have {guess_left} guesses left")
+            print(f"You have {guess_left} guesses left\n")
             guess_left -= 1
             user_guess = start_game()
             calculate_guess(secret_code, user_guess)

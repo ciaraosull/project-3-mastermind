@@ -27,7 +27,10 @@ This game takes these key reseach pieces and the users stories mentioned above i
 * Pyfiglet was installed and import pyfiglet was used to generate ascii art for the game
 The ascii art was chosen for readability for the user from [Figlet.org](http://www.figlet.org/)
 
-* colours for Python CLI
+* To change the font colour and background colour of some words Colorama was imported.
+    * import colorama
+    * from colorama import Fore
+    * colorama.init(autoreset=True)
 
 ## Features
 

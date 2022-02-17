@@ -97,7 +97,7 @@ def calculate_guess(secret_code, user_guess):
     Handle Guess count
     """
     code_hint = []
-    # puts user guess and secret code 
+    # puts user guess and secret code
     # back in a list to check against again
     guess = list(user_guess)
     code = list(secret_code)

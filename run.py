@@ -4,24 +4,30 @@ import random
 # import pyfiglet module for ascii art
 import pyfiglet
 
+# import colorama for adding colour
+import colorama
+from colorama import Fore
+colorama.init(autoreset=True)
+
 
 def get_name():
     """
     Welcome note and get name input from the user.
     """
 
-    result = pyfiglet.figlet_format("Mastermind", font = "digital")
-    print(result)
-    # print("**********************")
-    # print("      Mastermind")
-    # print("Crack the Code to Win!")
-    # print("**********************\n")
+    title = pyfiglet.figlet_format("Mastermind", font="standard")
+    print(title)
+
+    subtitle = pyfiglet.figlet_format("Crack The Code", font="digital")
+    print(subtitle)
+
+    print(Fore.YELLOW + "Created by Ciara O'Sullivan\n")
 
     while True:
         name_data = input("Enter your name here to begin:\n")
 
         if validate_data(name_data):
-            print(f"\nWelcome {name_data}")
+            print("\nWelcome " + Fore.GREEN + f"{name_data}")
             print("Have you got what it takes to break the code!\n")
             break
 

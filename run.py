@@ -126,16 +126,15 @@ def calculate_guess(secret_code, user_guess):
     """
     code_hint_green = []
     code_hint_orange = []
-    # puts user guess and secret code
+    # guess and code variables put user guess and secret code
     # back in a list to check against again
     guess = list(user_guess)
     code = list(secret_code)
 
     if guess == code:
         print("WINNER\n")
-        print("Play Again?\n")
-        main()
-        # play_again option to go here
+        play_again()
+
     else:
         for i in range(0, 4):
             if guess[i] == code[i]:
@@ -151,8 +150,28 @@ def calculate_guess(secret_code, user_guess):
                 code_hint_orange.append(f"{Fore.YELLOW}ORANGE{Fore.RESET}")
     # code line too long - to shorten
     code_hint = (' '.join(str(item) for item in code_hint_green)) + (" ") + (' '.join(str(item) for item in code_hint_orange))
-
+    # Add in a code list red for incorrect numbers?
     print(f"Code Hint: {code_hint}\n")
+
+
+def play_again():
+    """
+    Give user choice to play again or quit
+    """
+    play_choice = input(
+            "Play Again? Y or N:\n").lower()
+    if play_choice == "y":
+        print("You chose Yes! Let's Play!")
+        main()
+    elif play_choice == "n":
+        print(f"{Fore.MAGENTA}Sorry to see you go :-(\n")
+        print("Hope you come back soon to play again!")
+        print("In case you change your mind.....")
+        play_again()
+
+    else:
+        print(f"{Fore.RED}Sorry, not a valid response\n")
+        play_again()
 
 
 def main():
@@ -170,9 +189,7 @@ def main():
         if guess_left == 0:
             print(f"{Fore.RED}Sorry, No Guesses Left!")
             print(f"The Secret Code was {secret_code}")
-            print("Play Again?\n")
-            break
-            # put play_again() function here
+            play_again()
         else:
             print(
                 f"You have {Fore.RED}{guess_left}{Fore.RESET} guesses left\n")

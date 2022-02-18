@@ -111,7 +111,7 @@ def start_game():
 
         except ValueError:
             print("Please enter 4 numbers separated by a space only\n")
-            start_game()
+            continue
 
         if validate_guess(guess):
             print(f"\nYou Guessed {guess}")

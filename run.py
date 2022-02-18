@@ -108,7 +108,24 @@ def start_game():
     print(f"\nYou Guessed {guess}")
     return guess
 
+
+def validate_guess(guess):
+    """
+    Validates user input for their guess
+    """
+    try:
+        if len(guess) != 4:
+            raise ValueError(
+                f"Exactly 4 numbers required, you provided {len(guess)}"
+            )
+    except ValueError as error:
+        print(f"Invalid data: {error}, please try again.\n")
+        return False
+
+    return True
+
     # validate guess entry here
+
 
 def find_position(secret_code, user_guess):
     """
@@ -200,11 +217,3 @@ def main():
 
 
 main()
-
-
-# winner message. go to play again or quit goodbye message
-# game lost message. got to play again or goodby message
-# winner message trigger if code guess is correct
-# game lost message. trigger if attemps are over
-# play again to back to start get_name
-# quit then show goodbye message

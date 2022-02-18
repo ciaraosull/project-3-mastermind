@@ -102,29 +102,39 @@ def random_code(max_range):
 
 def start_game():
     """
-    Start game for user guess
+    Start game for user guess to accept numbers only
     """
-    guess = list(map(int, input("Please Enter your guess:\n").split(' ')))
-    print(f"\nYou Guessed {guess}")
+    while True:
+        try:
+            guess = list(
+                map(int, input("Please Enter your guess:\n").split(' ')))
+
+        except ValueError:
+            print("Please enter 4 numbers separated by a space only\n")
+            start_game()
+
+        if validate_guess(guess):
+            print(f"\nYou Guessed {guess}")
+            break
+
     return guess
 
 
-def validate_guess(guess):
+def validate_guess(values):
     """
-    Validates user input for their guess
+    Validates lenght of user input for their guess
     """
     try:
-        if len(guess) != 4:
+        if len(values) != 4:
             raise ValueError(
-                f"Exactly 4 numbers required, you provided {len(guess)}"
+                "Exactly 4 numbers only separated" +
+                f"by a space, you provided {len(values)}"
             )
     except ValueError as error:
         print(f"Invalid data: {error}, please try again.\n")
         return False
 
     return True
-
-    # validate guess entry here
 
 
 def find_position(secret_code, user_guess):

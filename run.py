@@ -127,11 +127,11 @@ def validate_guess(values):
     try:
         if len(values) != 4:
             raise ValueError(
-                "Exactly 4 numbers only separated" +
-                f"by a space, you provided {len(values)}"
+                "Exactly 4 numbers only" +
+                f" , you provided {len(values)}"
             )
     except ValueError as error:
-        print(f"Invalid data: {error}, please try again.\n")
+        print(f"{error}, please try again.\n")
         return False
 
     return True
@@ -175,8 +175,10 @@ def calculate_guess(secret_code, user_guess):
                 code[matched_position] = '-'
                 guess[i] = ""
                 code_hint_orange.append(f"{Fore.YELLOW}ORANGE{Fore.RESET}")
-    # code line too long - to shorten
-    code_hint = (' '.join(str(item) for item in code_hint_green)) + (" ") + (' '.join(str(item) for item in code_hint_orange))
+
+    code_hint = (
+        ' '.join(str(item) for item in code_hint_green)) + (" ") + (
+            ' '.join(str(item) for item in code_hint_orange))
     # Add in a code list red for incorrect numbers?
     print(f"Code Hint: {code_hint}\n")
 

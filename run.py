@@ -6,7 +6,7 @@ import pyfiglet
 
 # import colorama for adding colour
 import colorama
-from colorama import Fore
+from colorama import Fore, Back
 colorama.init(autoreset=True)
 
 
@@ -15,13 +15,15 @@ def get_name():
     Welcome note and get name input from the user.
     """
 
-    title = pyfiglet.figlet_format("Mastermind", font="standard")
+    title = pyfiglet.figlet_format(
+        "Mastermind", font="standard", justify="center")
     print(title)
 
-    subtitle = pyfiglet.figlet_format("Crack The Code", font="digital")
+    subtitle = pyfiglet.figlet_format(
+        "Crack The Code", font="digital", justify="center")
     print(subtitle)
 
-    print(Fore.YELLOW + "Created by Ciara O'Sullivan\n")
+    print(Fore.YELLOW + "Created by Ciara O'Sullivan".center(80) + "\n")
 
     while True:
         name_data = input("Enter your name here to begin:\n")
@@ -41,7 +43,7 @@ def validate_data(name):
             raise ValueError("Please input some type of name\n")
 
     except ValueError as error:
-        print(f"Try again.  {error}")
+        print(Fore.RED + f"Try again.  {error}")
         return False
 
     return True
@@ -53,26 +55,38 @@ def game_choice():
     They could be a returning player.
     """
     rules_choice = input(
-        "For Game Rules enter R otherwise enter P to Play:\n").lower()
+        "For Game Rules enter " +
+        Fore.YELLOW + "R " +
+        Fore.RESET + "otherwise enter " +
+        Fore.GREEN + "P " +
+        Fore.RESET + "to Play:\n").lower()
 
     if rules_choice == "r":
-        print("How to Play:\n")
-        print("You have 10 attempts to guess the secret code")
+        print(f"{Fore.BLUE}How to Play:\n")
+
+        print(
+            f"You have {Fore.YELLOW}10 {Fore.RESET}attempts " +
+            "to guess the secret code")
+
         print("The secret code is 4 numbers between 1-10")
         print("Numbers may be repeated within the secret code!\n")
-        print("Please separate your 4 numbers by a space")
+        print(f"{Fore.YELLOW}Please separate your 4 numbers by a space")
         print("For example: 1 2 3 4\n")
-        print("Code Hints:")
-        print("* = correct number in correct position")
-        print("& = correct number in wrong position")
-        print("Code Hint symbols are not in order!")
-        print("Let's Begin!\n")
+        print(f"{Fore.BLUE}Code Hints:\n")
+        print(
+            Back.GREEN + "GREEN" +
+            Back.RESET + " = correct number in correct position\n")
+        print(
+            Back.YELLOW + "ORANGE" +
+            Back.RESET + " = correct number in wrong position\n")
+        print("Code Hint colours are not in order!\n")
+        print(f"{Fore.MAGENTA}Let's Begin!\n")
 
     elif rules_choice == "p":
-        print("Let's Begin!\n")
+        print(f"{Fore.MAGENTA}Let's Begin!\n")
 
     else:
-        print("Sorry, not a valid response\n")
+        print(f"{Fore.RED}Sorry, not a valid response\n")
         game_choice()
 
 
@@ -91,11 +105,10 @@ def start_game():
     Start game for user guess
     """
     guess = list(map(int, input("Please Enter your guess:\n").split(' ')))
-    print(f"\nYou guessed {guess}")
+    print(f"\nYou Guessed {guess}")
     return guess
 
     # validate guess entry here
-
 
 def find_position(secret_code, user_guess):
     """
@@ -111,7 +124,8 @@ def calculate_guess(secret_code, user_guess):
     Compare user guess againts secret code and provide hints
     Handle Guess count
     """
-    code_hint = []
+    code_hint_green = []
+    code_hint_orange = []
     # puts user guess and secret code
     # back in a list to check against again
     guess = list(user_guess)
@@ -127,14 +141,17 @@ def calculate_guess(secret_code, user_guess):
             if guess[i] == code[i]:
                 code[i] = "-"
                 guess[i] = ""
-                code_hint.append("*")
+                code_hint_green.append(f"{Fore.GREEN}GREEN{Fore.RESET}")
 
         for i in range(0, 4):
             if guess[i] in code:
                 matched_position = find_position(code, guess[i])
                 code[matched_position] = '-'
                 guess[i] = ""
-                code_hint.append("&")
+                code_hint_orange.append(f"{Fore.YELLOW}ORANGE{Fore.RESET}")
+    # code line too long - to shorten
+    code_hint = (' '.join(str(item) for item in code_hint_green)) + (" ") + (' '.join(str(item) for item in code_hint_orange))
+
     print(f"Code Hint: {code_hint}\n")
 
 
@@ -151,12 +168,14 @@ def main():
 
     while guess_left <= 10:
         if guess_left == 0:
-            print("Sorry, No Guesses Left!")
+            print(f"{Fore.RED}Sorry, No Guesses Left!")
             print(f"The Secret Code was {secret_code}")
+            print("Play Again?\n")
             break
             # put play_again() function here
         else:
-            print(f"You have {guess_left} guesses left\n")
+            print(
+                f"You have {Fore.RED}{guess_left}{Fore.RESET} guesses left\n")
             guess_left -= 1
             user_guess = start_game()
             calculate_guess(secret_code, user_guess)

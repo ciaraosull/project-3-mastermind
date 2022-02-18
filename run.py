@@ -126,7 +126,6 @@ def validate_guess(values):
     """
     try:
         if len(values) != 4:
-            # 0r if <1 or > 10 raise error?
             raise ValueError(
                 "Exactly 4 numbers only" +
                 f" , you provided {len(values)}"
@@ -134,6 +133,17 @@ def validate_guess(values):
     except ValueError as error:
         print(f"{error}, please try again.\n")
         return False
+
+   # try:
+        # 0r if <1 or > 10 raise error?
+       # if all(i <= 0 for i in values) or all(i >= 11 for i in values):
+        #    raise ValueError(
+         #       "Your guess must be between 1 and 10 only"
+          #      )
+
+       # except ValueError as error:
+        #    print(f"{error}, please try again.\n")
+         #   return False
 
     return True
 

@@ -126,6 +126,7 @@ def validate_guess(values):
     """
     try:
         if len(values) != 4:
+            # 0r if <1 or > 10 raise error?
             raise ValueError(
                 "Exactly 4 numbers only" +
                 f" , you provided {len(values)}"

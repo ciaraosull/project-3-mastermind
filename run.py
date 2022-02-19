@@ -105,6 +105,7 @@ def start_game():
     Start game for user guess to accept numbers only
     """
     while True:
+        # strip() guess for white spaces
         try:
             guess = list(
                 map(int, input("Please Enter your guess:\n").split(' ')))
@@ -124,6 +125,7 @@ def validate_guess(values):
     """
     Validates lenght of user input for their guess
     """
+    # also put in for numbers below 1 and greater than 11
     try:
         if len(values) != 4:
             raise ValueError(
@@ -134,16 +136,16 @@ def validate_guess(values):
         print(f"{error}, please try again.\n")
         return False
 
-   # try:
-        # 0r if <1 or > 10 raise error?
-       # if all(i <= 0 for i in values) or all(i >= 11 for i in values):
-        #    raise ValueError(
-         #       "Your guess must be between 1 and 10 only"
-          #      )
+    # try:
+    # 0r if <1 or > 10 raise error?
+    # if all(i <= 0 for i in values) or all(i >= 11 for i in values):
+    #    raise ValueError(
+    #       "Your guess must be between 1 and 10 only"
+    #      )
 
-       # except ValueError as error:
-        #    print(f"{error}, please try again.\n")
-         #   return False
+    # except ValueError as error:
+    #    print(f"{error}, please try again.\n")
+    #   return False
 
     return True
 
@@ -206,8 +208,7 @@ def play_again():
     elif play_choice == "n":
         print(f"{Fore.MAGENTA}Sorry to see you go :-(\n")
         print("Hope you come back soon to play again!")
-        print("In case you change your mind.....")
-        play_again()
+        exit()
 
     else:
         print(f"{Fore.RED}Sorry, not a valid response\n")
@@ -239,4 +240,5 @@ def main():
             find_position(secret_code, user_guess)
 
 
-main()
+if __name__ == "__main__":
+    main()

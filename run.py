@@ -254,7 +254,7 @@ def main():
             print(f"{Fore.RED}Sorry, No Guesses Left!\n")
             print(f"The Secret Code was {secret_code}\n")
             lost_msg = pyfiglet.figlet_format(
-                "\nCode Not Cracked", font="digital")
+                "Code Not Cracked", font="digital")
             print(lost_msg)
             play_again()
         else:

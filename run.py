@@ -96,15 +96,15 @@ class Player:
                 print("Please enter 4 numbers separated by a space only\n")
                 continue
 
-            if self.validate_guess(guess):
+            if self.validate_guess_input(guess):
                 print(f"\nYou Guessed {guess}")
                 break
 
         return guess
 
-    def validate_guess(self, values):
+    def validate_guess_input(self, values):
         """
-        Validates length of user input for their guess
+        Validates the users input for their guess
         """
         # also put in for numbers below 1 and greater than 11
         try:
@@ -147,7 +147,7 @@ class CodeGenerator:
             random_nums.append(random.randint(1, max_range))
         return random_nums
 
-    def find_position(self, secret_code, user_guess):
+    def match_position(self, secret_code, user_guess):
         """
         Finds the position of the matched numbers
         """
@@ -155,7 +155,7 @@ class CodeGenerator:
             if secret_code[nums] == user_guess:
                 return nums
 
-    def calculate_guess(self, secret_code, user_guess):
+    def calculate_code_hint(self, secret_code, user_guess):
         """
         Compare user guess againts secret code and provide hints
         Handle Guess count
@@ -180,7 +180,7 @@ class CodeGenerator:
 
             for i in range(0, 4):
                 if guess[i] in code:
-                    matched_position = self.find_position(code, guess[i])
+                    matched_position = self.match_position(code, guess[i])
                     code[matched_position] = '-'
                     guess[i] = ""
                     code_hint_orange.append(f"{Fore.YELLOW}ORANGE{Fore.RESET}")
@@ -249,8 +249,8 @@ def main():
             guess_left -= 1
 
             user_guess = Player().start_game()
-            CodeGenerator().calculate_guess(secret_code, user_guess)
-            CodeGenerator().find_position(secret_code, user_guess)
+            CodeGenerator().calculate_code_hint(secret_code, user_guess)
+            CodeGenerator().match_position(secret_code, user_guess)
 
 
 if __name__ == "__main__":

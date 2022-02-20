@@ -167,9 +167,9 @@ class CodeGenerator:
         code = list(secret_code)
 
         if guess == code:
-            title = pyfiglet.figlet_format(
+            win_msg = pyfiglet.figlet_format(
                 "Winner!", font="standard")
-            print(title)
+            print(win_msg)
             play_again()
 
         else:
@@ -204,10 +204,14 @@ def play_again():
     Give user choice to play again or quit
     """
     play_choice = input(
+            f"{Fore.YELLOW}" +
             "Play Again? Y or N:\n").lower()
     if play_choice == "y":
-        print("You chose Yes! Let's Play!")
+        print(
+            f"{Fore.GREEN}" +
+            "You chose Yes! Let's Play!")
         main()
+
     elif play_choice == "n":
         print(f"{Fore.MAGENTA}Sorry to see you go :-(\n")
         print("Hope you come back soon to play again!")
@@ -249,6 +253,9 @@ def main():
         if guess_left == 0:
             print(f"{Fore.RED}Sorry, No Guesses Left!")
             print(f"The Secret Code was {secret_code}")
+            lost_msg = pyfiglet.figlet_format(
+                "Code Not Cracked", font="digital")
+            print(lost_msg)
             play_again()
         else:
             print(

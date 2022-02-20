@@ -193,8 +193,8 @@ class CodeGenerator:
         # to ensure no blank code hint printed for pos UX
         if not code_hint_green and not code_hint_orange:
             print(
-                f"{Fore.RED}" +
-                "Sorry! None of those numbers are in the secret code\n")
+                f"Code Hint: {Fore.RED}" +
+                "None of those numbers are in the secret code\n")
         else:
             print(f"Code Hint: {code_hint}\n")
 

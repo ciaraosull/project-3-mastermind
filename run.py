@@ -194,7 +194,7 @@ class CodeGenerator:
         if not code_hint_green and not code_hint_orange:
             print(
                 f"{Fore.RED}" +
-                "Sorry! None of those numbers are in the secret code")
+                "Sorry! None of those numbers are in the secret code\n")
         else:
             print(f"Code Hint: {code_hint}\n")
 
@@ -205,7 +205,7 @@ def play_again():
     """
     play_choice = input(
             f"{Fore.YELLOW}" +
-            "Play Again? Y or N:\n").lower()
+            f"Play Again? Y or N:{Fore.RESET}\n").lower()
     if play_choice == "y":
         print(
             f"{Fore.GREEN}" +
@@ -251,10 +251,10 @@ def main():
 
     while guess_left <= 10:
         if guess_left == 0:
-            print(f"{Fore.RED}Sorry, No Guesses Left!")
-            print(f"The Secret Code was {secret_code}")
+            print(f"{Fore.RED}Sorry, No Guesses Left!\n")
+            print(f"The Secret Code was {secret_code}\n")
             lost_msg = pyfiglet.figlet_format(
-                "Code Not Cracked", font="digital")
+                "\nCode Not Cracked", font="digital")
             print(lost_msg)
             play_again()
         else:

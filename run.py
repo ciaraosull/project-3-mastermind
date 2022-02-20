@@ -84,16 +84,18 @@ class Player:
 
     def start_game(self):
         """
-        Start game for user guess to accept numbers only
+        Start game for user guess to accept numbers separated by 1 space only
         """
         while True:
-            # strip() guess for white spaces
             try:
                 guess = list(
-                    map(int, input("Please Enter your guess:\n").split(' ')))
+                    map(int, input(
+                        "Please Enter your guess:\n").strip(" ").split(' ')))
 
             except ValueError:
-                print("Please enter 4 numbers separated by a space only\n")
+                print(
+                    f"{Fore.RED}" +
+                    "Please enter 4 numbers separated by one space only\n")
                 continue
 
             if self.validate_guess_input(guess):
@@ -104,29 +106,27 @@ class Player:
 
     def validate_guess_input(self, values):
         """
-        Validates the users input for their guess
+        Validates the users input guess to be only 4 numbers and between 1-10
         """
-        # also put in for numbers below 1 and greater than 11
         try:
             if len(values) != 4:
                 raise ValueError(
-                    "Exactly 4 numbers only" +
-                    f" , you provided {len(values)}"
+                    "Exactly 4 numbers only, separated by a space.\n" +
+                    f"You provided {len(values)} number/s"
                 )
         except ValueError as error:
-            print(f"{error}, please try again.\n")
+            print(f"{Fore.RED}{error}, please try again.\n")
             return False
 
-    # try:
-    # 0r if <1 or > 10 raise error?
-    # if all(i <= 0 for i in values) or all(i >= 11 for i in values):
-    #    raise ValueError(
-    #       "Your guess must be between 1 and 10 only"
-    #      )
-
-    # except ValueError as error:
-    #    print(f"{error}, please try again.\n")
-    #   return False
+        try:
+            for i in values:
+                if i >= 11 or i <= 0:
+                    raise ValueError(
+                        "Only guess numbers between 1 - 10."
+                        )
+        except ValueError as error:
+            print(f"{Fore.RED}{error} Please try again.\n")
+            return False
 
         return True
 

@@ -1,4 +1,4 @@
-""" Mastermind Game """
+""" Mastermind Game imports """
 # import random for generating random numbers for secret
 import random
 
@@ -162,13 +162,14 @@ class CodeGenerator:
         """
         code_hint_green = []
         code_hint_orange = []
-        # guess and code variables put user guess and secret code
-        # back in a list to check against again
+        # Variables to put back in a list to check against again
         guess = list(user_guess)
         code = list(secret_code)
 
         if guess == code:
-            print("WINNER\n")
+            title = pyfiglet.figlet_format(
+                "Winner!", font="standard")
+            print(title)
             play_again()
 
         else:
@@ -188,8 +189,14 @@ class CodeGenerator:
         code_hint = (
             ' '.join(str(item) for item in code_hint_green)) + (" ") + (
                 ' '.join(str(item) for item in code_hint_orange))
-        # Add in a code list red for incorrect numbers?
-        print(f"Code Hint: {code_hint}\n")
+
+        # to ensure no blank code hint printed for pos UX
+        if not code_hint_green and not code_hint_orange:
+            print(
+                f"{Fore.RED}" +
+                "Sorry! None of those numbers are in the secret code")
+        else:
+            print(f"Code Hint: {code_hint}\n")
 
 
 def play_again():

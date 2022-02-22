@@ -21,6 +21,20 @@ A user wants to:
 This game takes these key reseach pieces and the users stories mentioned above into consideration to create a positive UX.  The users experience is discussed in more detail below with examples in the Design & Features Sections.
 
 ## Design
+**UML**
+Unified Modelling Language (UML) was used to visualize the various features of the game. 
+
+* Use Case Diagram
+A Use Case Diagram was drafted to capture the games functionaity and relationships with the user.
+
+The Matermind Game is the system represented by the rectangle below.  The external object is the Primary Actor.  In this game it will be the Player that initiates the use of the system.
+
+The Use Case in the diagram below are represented in circles and these are the actions that will initiate different tasks within the game.
+
+The relationship the Player has with the system is represented with a solid line.  The two other relationships are include relationships (executed each time) and extend relationships (executed sometimes), which are represented by a dashed line.
+
+![Use Case Diagram](assets/images/use-case-diagram.png)
+
 * Flow Chart
     ![Flowchart](assets/images/flowchart.png)
 

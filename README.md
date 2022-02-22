@@ -21,10 +21,12 @@ A user wants to:
 This game takes these key reseach pieces and the users stories mentioned above into consideration to create a positive UX.  The users experience is discussed in more detail below with examples in the Design & Features Sections.
 
 ## Design
-**UML**
-Unified Modelling Language (UML) was used to visualize the various features of the game. 
 
-**Use Case Diagram**
+### Data Model
+
+**UML - Use Case Diagram**
+
+Unified Modelling Language (UML) was used to visualize the various features of the game. 
 
 * A Use Case Diagram was drafted to capture the games functionaity and relationships with the user.
 
@@ -36,14 +38,24 @@ Unified Modelling Language (UML) was used to visualize the various features of t
 
     ![Use Case Diagram](assets/images/use-case-diagram.png)
 
-* Flow Control
-To design the order in which individual statements, instructions or function calls were executed or evaluated a flow chart was used for the control flow.  Here, the flow of the game was laid out and structured to aid in the design of the control flow statements such as if-elif-else statements, while loops and for loops.
+**Classes**
+Throughout this project, I have opted to use Object Oriented Programming. From the Use Case Diagram the Classes were created.  The game consists of two classes, the Player & the CodeGenorator.  Both of these classes have asscociated methods.  These classes can be expanded on in future development.  They are stored in separate files to allow for separating the code into parts that hold related data and functionality.  This will allow any future expansion and development of this project to have a clear structure and also for any code re-use and sharing as well as maintenance.
+
+**Flow Control**
+To design the order in which individual statements, instructions or function calls were executed or evaluated a flow chart was used for the control flow.  Here, the flow of the game was laid out and structured to aid in the design of the control flow statements such as if-elif-else statements, while loops and for loops.  This also allowed the design of the user input validation loops to be visually clear before the code was written.
 
     ![Flowchart](assets/images/flowchart.png)
 
+
+### Asthetic Design
+
+**Fonts**
 * Pyfiglet was installed and import pyfiglet was used to generate ascii art for the game
 The ascii art was chosen for readability for the user from [Figlet.org](http://www.figlet.org/)
 
+* Fonts used were:
+
+**Colour**
 * To change the font colour and background colour of some words Colorama was imported.
     * import colorama
     * from colorama import Fore

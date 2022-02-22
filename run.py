@@ -2,6 +2,9 @@
 # import random for generating random numbers for secret
 import random
 
+# import os to help clear terminal for user on replay
+import os
+
 # import pyfiglet module for ascii art
 import pyfiglet
 
@@ -91,7 +94,7 @@ class Player:
         while True:
             try:
                 # Iterates through user input and converts to integers.
-                # Also strips off white spaces at begining 
+                # Also strips off white spaces at begining
                 # and end if user enters by mistake
                 guess = list(
                     map(int, input(
@@ -206,6 +209,13 @@ class CodeGenerator:
             print(f"Code Hint: {code_hint}\n")
 
 
+def clear():
+    """
+    Clear screen for user on replay
+    """
+    os.system("clear")
+
+
 def play_again():
     """
     Give user choice to play again or quit
@@ -214,6 +224,7 @@ def play_again():
             f"{Fore.YELLOW}" +
             f"Play Again? Y or N:{Fore.RESET}\n").lower()
     if play_choice == "y":
+        clear()
         print(
             f"{Fore.GREEN}" +
             "You chose Yes! Let's Play!")

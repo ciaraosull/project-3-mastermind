@@ -70,6 +70,17 @@ The ascii art was chosen for readability for the user from [Figlet.org](http://w
 
 ## Libraries & Technology Used
 
+**Built in Python Libraries**
+
+*   os
+
+The os library was imported to then create a function to utilise the os.system to clear the terminal.  This supports a positive user experience on game replay by clearing the previous game play and making the screen clearer and more structured.
+
+*   random
+
+The random library was imported to access to the built in method of generating a random number selection using the ranint() method.  This then is used to generate a random sequence of 4 numbers from a range of 1 – 10 for the secret code the user has to crack.
+
+
 
 
 ## Features

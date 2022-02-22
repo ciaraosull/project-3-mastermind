@@ -24,16 +24,17 @@ This game takes these key reseach pieces and the users stories mentioned above i
 **UML**
 Unified Modelling Language (UML) was used to visualize the various features of the game. 
 
-* Use Case Diagram
-A Use Case Diagram was drafted to capture the games functionaity and relationships with the user.
+**Use Case Diagram**
 
-The Matermind Game is the system represented by the rectangle below.  The external object is the Primary Actor.  In this game it will be the Player that initiates the use of the system.
+* A Use Case Diagram was drafted to capture the games functionaity and relationships with the user.
 
-The Use Case in the diagram below are represented in circles and these are the actions that will initiate different tasks within the game.
+* The Matermind Game is the system represented by the rectangle below.  The external object is the Primary Actor.  In this game it will be the Player that initiates the use of the system.
 
-The relationship the Player has with the system is represented with a solid line.  The two other relationships are include relationships (executed each time) and extend relationships (executed sometimes), which are represented by a dashed line.
+* The Use Case in the diagram below are represented in circles and these are the actions that will initiate different tasks within the game.
 
-![Use Case Diagram](assets/images/use-case-diagram.png)
+* The relationship the Player has with the system is represented with a solid line.  The two other relationships are include relationships (executed each time) and extend relationships (executed sometimes), which are represented by a dashed line.
+
+    ![Use Case Diagram](assets/images/use-case-diagram.png)
 
 * Flow Chart
     ![Flowchart](assets/images/flowchart.png)

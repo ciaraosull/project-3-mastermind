@@ -36,17 +36,19 @@ Unified Modelling Language (UML) was used to visualize the various features of t
 
 * The relationship the Player has with the system is represented with a solid line.  The two other relationships are include relationships (executed each time) and extend relationships (executed sometimes), which are represented by a dashed line.
 
-    ![Use Case Diagram](assets/images/use-case-diagram.png)
+![Use Case Diagram](assets/images/use-case-diagram.png)
 
 **Classes**
+
 Throughout this project, I have opted to use Object Oriented Programming. From the Use Case Diagram the Classes were created.  The game consists of two classes, the Player & the CodeGenorator.  Both of these classes have asscociated methods.  These classes can be expanded on in future development.  They are stored in separate files to allow for separating the code into parts that hold related data and functionality.  This will allow any future expansion and development of this project to have a clear structure and also for any code re-use and sharing as well as maintenance.
 
-    ![Class Diagram](assets/images/class-diagram.png)
+![Class Diagram](assets/images/class-diagram.png)
 
 **Flow Control**
+
 To design the order in which individual statements, instructions or function calls were executed or evaluated a flow chart was used for the control flow.  Here, the flow of the game was laid out and structured to aid in the design of the control flow statements such as if-elif-else statements, while loops and for loops.  This also allowed the design of the user input validation loops to be visually clear before the code was written.
 
-    ![Flowchart](assets/images/flowchart.png)
+![Flowchart](assets/images/flowchart.png)
 
 
 ### Asthetic Design

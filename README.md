@@ -54,23 +54,27 @@ To design the order in which individual statements, instructions or function cal
 ### Asthetic Design
 
 **Fonts**
-* Pyfiglet was installed and import pyfiglet was used to generate ascii art for the game
+* Pyfiglet was installed and import pyfiglet was used to generate ascii art for the game.  Pyfiglet was added to requirements.txt then for deployment.
+
 The ascii art was chosen for readability for the user from [Figlet.org](http://www.figlet.org/)
 
 * Fonts used were:
 
+*   Standard Font - for clarity & Line Spacing.  Used on Title & Winner Message
+
+*   Digital Font - for letters having a locked-in effect.  Used on sub-title and game lost message to depict code not broken or cracked.
+
 **Colour**
-* To change the font colour and background colour of some words Colorama was imported.
-    * import colorama
-    * from colorama import Fore
-    * colorama.init(autoreset=True)
+* To change the font colour and background colour of some words Colorama was imported.  Colorama was added to requirements.txt then for deployment.  A mix of yellow, green, blue and red was used to keep the game play interesting and as a visual que to user for certain feedback.
+
+
+## Libraries & Technology Used
+
+
 
 ## Features
 
 ### Features Left to Implement
-
-
-## Data Model
 
 ## Testing
 

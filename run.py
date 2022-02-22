@@ -32,6 +32,8 @@ class Player:
         """
         Validates user input for name
         """
+        # If nothing entered then return error,
+        # otherwise accept all characters for name / nickname
         try:
             if name == "":
                 raise ValueError("Please input some type of name\n")
@@ -88,6 +90,9 @@ class Player:
         """
         while True:
             try:
+                # Iterates through user input and converts to integers.
+                # Also strips off white spaces at begining 
+                # and end if user enters by mistake
                 guess = list(
                     map(int, input(
                         "Please Enter your guess:\n").strip(" ").split(' ')))
@@ -158,11 +163,11 @@ class CodeGenerator:
     def calculate_code_hint(self, secret_code, user_guess):
         """
         Compare user guess againts secret code and provide hints
-        Handle Guess count
         """
         code_hint_green = []
         code_hint_orange = []
-        # Variables to put back in a list to check against again
+        # Variables to put back in a list to
+        # check against agin on next guess
         guess = list(user_guess)
         code = list(secret_code)
 
@@ -186,11 +191,13 @@ class CodeGenerator:
                     guess[i] = ""
                     code_hint_orange.append(f"{Fore.YELLOW}ORANGE{Fore.RESET}")
 
+        # Iterate through each item and
+        # join both lists for printing colour with colorama
         code_hint = (
             ' '.join(str(item) for item in code_hint_green)) + (" ") + (
                 ' '.join(str(item) for item in code_hint_orange))
 
-        # to ensure no blank code hint printed for pos UX
+        # to ensure no blank code hint printed for positive UX
         if not code_hint_green and not code_hint_orange:
             print(
                 f"Code Hint: {Fore.RED}" +
@@ -239,7 +246,7 @@ def welcome():
 
 def main():
     """
-    Run all program function
+    Run all program functions and methods
     """
     welcome()
     Player().get_name()
@@ -248,7 +255,7 @@ def main():
     # for testing only take away print at end
     print(f"The secret code is {secret_code}")
     guess_left = 10
-
+    # Handle guess count for order of running
     while guess_left <= 10:
         if guess_left == 0:
             print(f"{Fore.RED}Sorry, No Guesses Left!\n")

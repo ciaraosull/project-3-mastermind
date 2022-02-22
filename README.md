@@ -20,6 +20,12 @@ A user wants to:
 ### User Experience in this Game
 This game takes these key reseach pieces and the users stories mentioned above into consideration to create a positive UX.  The users experience is discussed in more detail below with examples in the Design & Features Sections.
 
+## Features
+
+
+### Features Left to Implement
+
+
 ## Design
 
 ### Data Model
@@ -75,11 +81,11 @@ A mix of yellow, green, blue and red was used to keep the game play interesting 
 
 *   os
 
-The os library was imported to then create a function to utilise the os.system to clear the terminal.  This supports a positive user experience on game replay by clearing the previous game play and making the screen clearer and more structured.
+The os library was imported to create a function to utilise the os.system to clear the terminal.  This supports a positive user experience on game replay by clearing the previous game play and making the screen clearer and more structured.
 
 *   random
 
-The random library was imported to access to the built in method of generating a random number selection using the ranint() method.  This then is used to generate a random sequence of 4 numbers from a range of 1 – 10 for the secret code the user has to crack.
+The random library was imported to access the built in method of generating a random number selection using the ranint() method.  This then is used to generate a random sequence of 4 numbers from a range of 1 – 10 for the secret code the user has to crack.
 
 **Other**
 * [Colorama](https://pypi.org/project/colorama/) for adding colour to fonts.
@@ -87,11 +93,6 @@ The random library was imported to access to the built in method of generating a
 *   [Pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/#:~:text=pyfiglet%20takes%20ASCII%20text%20and,pyfiglet%20module%20%3A%20pip%20install%20pyfiglet) for adding ascii art.
 
 *   [LucidCharts](https://www.lucidchart.com/) was used to create the UML Case Diagram, Class Diagram and the Flowchart.
-
-
-## Features
-
-### Features Left to Implement
 
 ## Testing
 

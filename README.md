@@ -54,19 +54,20 @@ To design the order in which individual statements, instructions or function cal
 ### Asthetic Design
 
 **Fonts**
-* Pyfiglet was installed and import pyfiglet was used to generate ascii art for the game.  Pyfiglet was added to requirements.txt then for deployment.
+[Pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/#:~:text=pyfiglet%20takes%20ASCII%20text%20and,pyfiglet%20module%20%3A%20pip%20install%20pyfiglet) was installed and import pyfiglet was used to generate ascii art for the game.  Pyfiglet was added to requirements.txt then for deployment.
 
 The ascii art was chosen for readability for the user from [Figlet.org](http://www.figlet.org/)
 
-* Fonts used were:
+**Fonts used were:**
 
 *   Standard Font - for clarity & Line Spacing.  Used on Title & Winner Message
 
 *   Digital Font - for letters having a locked-in effect.  Used on sub-title and game lost message to depict code not broken or cracked.
 
 **Colour**
-* To change the font colour and background colour of some words Colorama was imported.  Colorama was added to requirements.txt then for deployment.  A mix of yellow, green, blue and red was used to keep the game play interesting and as a visual que to user for certain feedback.
+To change the font colour and background colour of some words [Colorama](https://pypi.org/project/colorama/) was imported.  Colorama was added to requirements.txt then for deployment.  
 
+A mix of yellow, green, blue and red was used to keep the game play interesting and as a visual que to user for certain feedback.
 
 ## Libraries & Technology Used
 
@@ -80,7 +81,12 @@ The os library was imported to then create a function to utilise the os.system t
 
 The random library was imported to access to the built in method of generating a random number selection using the ranint() method.  This then is used to generate a random sequence of 4 numbers from a range of 1 – 10 for the secret code the user has to crack.
 
+**Other**
+* [Colorama](https://pypi.org/project/colorama/) for adding colour to fonts.
 
+*   [Pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/#:~:text=pyfiglet%20takes%20ASCII%20text%20and,pyfiglet%20module%20%3A%20pip%20install%20pyfiglet) for adding ascii art.
+
+*   [LucidCharts](https://www.lucidchart.com/) was used to create the UML Case Diagram, Class Diagram and the Flowchart.
 
 
 ## Features

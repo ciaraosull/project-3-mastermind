@@ -36,7 +36,9 @@ Unified Modelling Language (UML) was used to visualize the various features of t
 
     ![Use Case Diagram](assets/images/use-case-diagram.png)
 
-* Flow Chart
+* Flow Control
+To design the order in which individual statements, instructions or function calls were executed or evaluated a flow chart was used for the control flow.  Here, the flow of the game was laid out and structured to aid in the design of the control flow statements such as if-elif-else statements, while loops and for loops.
+
     ![Flowchart](assets/images/flowchart.png)
 
 * Pyfiglet was installed and import pyfiglet was used to generate ascii art for the game

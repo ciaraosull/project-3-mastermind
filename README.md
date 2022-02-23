@@ -23,7 +23,7 @@ In this game Mastermind – Code Breaker users play to crack the secret code ran
 * The order of the code hint will be any GREENs first and then ORANGE so it does not match the order of the players numbers in their guess.
 
 >
->For example:
+>**For example:**
 >
 >       secret code is 1, 2, 3, 4
 >
@@ -31,7 +31,7 @@ In this game Mastermind – Code Breaker users play to crack the secret code ran
 >
 >       code hint will be: GREEN GREEN ORANGE
 >
-> This represent 1 & 4 as two GREENs and 3 as ORANGE
+>       This represent 1 & 4 as two GREENs and 3 as ORANGE
 
 
 

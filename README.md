@@ -20,7 +20,7 @@ In this game Mastermind – Code Breaker users play to crack the secret code ran
 
 * After every attempt (unless successful) the player is given a code hint.  Every GREEN represents how many numbers were correct and in the correct position.  Every ORANGE represents how many numbers were correct but in the incorrect position.  
 
-* The order of the code hint will be any GREENs first and then ORANGE so it does not match the order of the players numbers in their guess.
+* The code hint og GREENs and ORANGEs are do not match the order of the players numbers in their guess.
 
 >
 >**For example:**
@@ -43,13 +43,20 @@ In this game Mastermind – Code Breaker users play to crack the secret code ran
 ## User Experience (UX)
 
 ### User Stories
-A user wants to:
 
+Target Audience – Adults who want to play an online command line interface strategy game for a fun challenge and cognitive stimulation.
 
-### User Experience Research
+As a User I want to:
+•	play the game clearly across different devices
+•	understand how to play the game
+•	play a game that is not timed
+•	know how many attempts I have left
+•	know when I have entered something in an incorrect format and understand why
+•	have fun and be challenged
+•	have the choice to easily play again or quit
 
 ### User Experience in this Game
-This game takes these key reseach pieces and the users stories mentioned above into consideration to create a positive UX.  The users experience is discussed in more detail below with examples in the Design & Features Sections.
+This game takes the users stories mentioned above into consideration to create a positive UX.  The users experience is discussed in more detail below with examples in the Design & Features Sections.
 
 ## Features
 
@@ -57,7 +64,7 @@ This game takes these key reseach pieces and the users stories mentioned above i
 ### Features Left to Implement
 
 
-### Data Model
+### Data Model Design
 
 **UML - Use Case Diagram**
 
@@ -88,7 +95,7 @@ To design the order in which individual statements, instructions or function cal
 ![Flowchart](assets/images/flowchart.png)
 
 
-### Design
+### Aesthetic Design
 
 **Fonts**
 [Pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/#:~:text=pyfiglet%20takes%20ASCII%20text%20and,pyfiglet%20module%20%3A%20pip%20install%20pyfiglet) was installed and import pyfiglet was used to generate ascii art for the game.  Pyfiglet was added to requirements.txt then for deployment to Heroku.

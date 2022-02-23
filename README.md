@@ -26,8 +26,6 @@ This game takes these key reseach pieces and the users stories mentioned above i
 ### Features Left to Implement
 
 
-## Design
-
 ### Data Model
 
 **UML - Use Case Diagram**
@@ -54,15 +52,15 @@ The classes and their asscociated methods are stored in separate files to allow 
 
 **Flow Control**
 
-To design the order in which individual statements, instructions or function calls were executed or evaluated a flow chart was used for the control flow.  Here, the flow of the game was laid out and structured to aid in the design of the control flow statements such as if-elif-else statements, while loops and for loops.  This also allowed the design of the user input validation loops to be visually clear before the code was written.
+To design the order in which individual statements, instructions or function calls were executed or evaluated a flow chart was used for the control flow.  Here, the flow of the game was laid out and structured to aid in the design of the control flow statements such as if-elif-else statements, while loops and for loops.  This also allowed the design of the user input validation checks to be visually clear before the code was written.
 
 ![Flowchart](assets/images/flowchart.png)
 
 
-### Asthetic Design
+### Design
 
 **Fonts**
-[Pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/#:~:text=pyfiglet%20takes%20ASCII%20text%20and,pyfiglet%20module%20%3A%20pip%20install%20pyfiglet) was installed and import pyfiglet was used to generate ascii art for the game.  Pyfiglet was added to requirements.txt then for deployment.
+[Pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/#:~:text=pyfiglet%20takes%20ASCII%20text%20and,pyfiglet%20module%20%3A%20pip%20install%20pyfiglet) was installed and import pyfiglet was used to generate ascii art for the game.  Pyfiglet was added to requirements.txt then for deployment to Heroku.
 
 The ascii art was chosen for readability for the user from [Figlet.org](http://www.figlet.org/)
 
@@ -70,7 +68,7 @@ The ascii art was chosen for readability for the user from [Figlet.org](http://w
 
 *   Standard Font - for clarity & Line Spacing.  Used on Title & Winner Message
 
-*   Digital Font - for letters having a locked-in effect.  Used on sub-title and game lost message to depict code not broken or cracked.
+*   Digital Font - for letters having a locked-in effect.  Used on sub-title and game lost message to depict code not broken or code not cracked.  This is a little hard to read but the fun point of using this font is exactly that.  The letters are presented locked in a grid and to read them is on par with trying to figure out and break a code, which fits nicely with the theme of the game.  The text in this font is not detrimental to understanding the game or instructions, it is purely for fun and decoration so it should not matter if it is not read.
 
 **Colour**
 To change the font colour and background colour of some words [Colorama](https://pypi.org/project/colorama/) was imported.  Colorama was added to requirements.txt then for deployment.  
@@ -96,9 +94,12 @@ The random library was imported to access the built in method of generating a ra
 
 *   [LucidCharts](https://www.lucidchart.com/) was used to create the UML Case Diagram, Class Diagram and the Flowchart.
 
+*   Microsoft Photos to edit, crop and save images of charts and diagrams
+
 ## Testing
 
 ### Interesting Issues & Bugs Found
+
 ### Validator Testing
 
 ## Deployment

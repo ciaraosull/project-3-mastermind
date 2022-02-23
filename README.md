@@ -46,7 +46,9 @@ Unified Modelling Language (UML) was used to visualize the various features of t
 
 **Classes**
 
-Throughout this project, I have opted to use Object Oriented Programming. From the Use Case Diagram the Classes were created.  The game consists of two classes, the Player & the CodeGenorator.  Both of these classes have asscociated methods.  These classes can be expanded on in future development.  They are stored in separate files to allow for separating the code into parts that hold related data and functionality.  This will allow any future expansion and development of this project to have a clear structure and also for any code re-use and sharing as well as maintenance.
+Throughout this project, I have opted to use Object Oriented Programming. From the Use Case Diagram the Classes were created.  The game consists of two classes, the Player & the CodeGenerator.  Both of these classes have asscociated methods.  The class diagram below was used to decide what each class does and then design the methods each class should have.
+
+The classes and their asscociated methods are stored in separate files to allow for separating the code into parts that hold related data and functionality.  This will allow any future expansion and development of this project to have a clear structure and also for any code re-use and sharing as well as maintenance.
 
 ![Class Diagram](assets/images/class-diagram.png)
 

@@ -25,7 +25,7 @@ class Player:
         """
         while True:
             name_data = input("Enter your name here to begin:\n")
-
+            # pass the name through the validate_data method to check
             if self.validate_data(name_data):
                 print("\nWelcome " + Fore.GREEN + f"{name_data}")
                 print("Have you got what it takes to break the code!\n")
@@ -151,7 +151,9 @@ class CodeGenerator:
         Generate random secret code here
         """
         random_nums = []
-        for nums in range(4):
+        # using list comprehension + randint()
+        # to generate random number list
+        for i in range(4):
             random_nums.append(random.randint(1, max_range))
         return random_nums
 
@@ -260,13 +262,22 @@ def main():
     Run all program functions and methods
     """
     welcome()
-    Player().get_name()
-    Player().game_choice()
-    secret_code = CodeGenerator().random_code(10)
+    # create objects of the classes to invoke constructors
+    player = Player()
+    coder = CodeGenerator()
+    # calling the instance methods using the object player
+    player.get_name()
+    player.game_choice()
+    # assigning variable secret_code to the method
+    # that generates random numbers and pass through max range of 10
+    secret_code = coder.random_code(10)
+
     # for testing only take away print at end
     print(f"The secret code is {secret_code}")
-    guess_left = 10
+
     # Handle guess count for order of running
+    guess_left = 10
+
     while guess_left <= 10:
         if guess_left == 0:
             print(f"{Fore.RED}Sorry, No Guesses Left!\n")
@@ -279,10 +290,12 @@ def main():
             print(
                 f"You have {Fore.RED}{guess_left}{Fore.RESET} guesses left\n")
             guess_left -= 1
-
-            user_guess = Player().start_game()
-            CodeGenerator().calculate_code_hint(secret_code, user_guess)
-            CodeGenerator().match_position(secret_code, user_guess)
+            # assigning variable user_guess to the method
+            # that asks user for their guess
+            user_guess = player.start_game()
+            # calling the instance methods using the object coder
+            coder.calculate_code_hint(secret_code, user_guess)
+            coder.match_position(secret_code, user_guess)
 
 
 if __name__ == "__main__":

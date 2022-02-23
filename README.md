@@ -59,6 +59,20 @@ As a User I want to:
 This game takes the users stories mentioned above into consideration to create a positive UX.  The users experience is discussed in more detail below with examples in the Design & Features Sections.
 
 ## Features
+Title Screen:
+
+[Pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/#:~:text=pyfiglet%20takes%20ASCII%20text%20and,pyfiglet%20module%20%3A%20pip%20install%20pyfiglet)was installed and import pyfiglet was used to generate ascii art for the title and subtitle of the game.
+
+Standard Font was used for the title as it is large and has nice spacing and clarity of letters.  This was to give the user clarity of what the game is called.  It was centered to give a nice clean layout too.
+
+For the subtitle the font used was digital.  Although not as clear as the standard fornt, it was used for fun and uniquness to give the user the feeling of the letters being 'locked-in' to compliment the theme of the game.
+
+The authours name was centered too to separate it from the game play area and coloured using Coolor to help it stand out and make the first part of the game bright for the user.
+
+A friendly message to the user to enter their name is seen first. This alerst the user to how to start playing the game.
+
+
+![Title](assets/images/title_screenshot.png)
 
 
 ### Features Left to Implement

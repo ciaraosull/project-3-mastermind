@@ -60,7 +60,7 @@ This game takes the users stories mentioned above into consideration to create a
 
 ## Features
 
-**Title Screen:**
+**Title Section:**
 
 * [Pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/#:~:text=pyfiglet%20takes%20ASCII%20text%20and,pyfiglet%20module%20%3A%20pip%20install%20pyfiglet)was installed and import pyfiglet was used to generate ascii art for the title and subtitle of the game.
 
@@ -75,13 +75,23 @@ This game takes the users stories mentioned above into consideration to create a
 
     ![Title](assets/images/title_screenshot.png)
 
-**Name Input:**
+* However, if the user presses enter without inputting a name an error will appear.  This game will accept any characters or numbers for a name as the user may wish to use a nickname or a fun made up name.  However, if nothing at all is entered then the user is shown a message in red to highlight to them that nothing was entered and instuctions on what to do and to try enter a name again.
+
+    ![Name Error](/assets/images/name-error-screensht.png)
+
+**Name Input Section:**
 
 * After the user is asked to input their name, they are greeted with a Welcome message with their name returned in colour,  This was to add some fun personalisation and interactivity for the user.
 
 * The user is then asked if they would like to Play straight away or view the Rules of the game.  Both these words are highlighted in different colours to show the 2 options clearly to the user.  The purpose of this was in case the user is returning they may not wish to have the screen cluttered with the rules of how to play and would just like to start straight away.
 
     ![Name Screen](/assets/images/name-screenshot.png)
+
+**Rules Section:**
+
+    ![Rules Screenshot](/assets/images/rules_screenshot.png)
+
+
 
 
 

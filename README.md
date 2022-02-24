@@ -87,13 +87,55 @@ This game takes the users stories mentioned above into consideration to create a
 
     ![Name Screen](/assets/images/name-screenshot.png)
 
-    * However, if the user presses anything other than inputting R or P an error will appear.  This game will accept capital R or small r and capital P or small p because the users input is changed to lowercase when inputted by using the .lower method.  The error message is in red to highlight to them that what was entered was incorrect and instuctions on what to do and to try enter R or P again.
+* However, if the user presses anything other than inputting R or P an error will appear.  This game will accept capital R or small r and capital P or small p because the users input is changed to lowercase when inputted by using the .lower method.  The error message is in red to highlight to them that what was entered was incorrect and instuctions on what to do and to try enter R or P again.
 
     ![Rules Error Screenshot](/assets/images/rules-error-screenshot.png)
 
 **Rules Section:**
 
-![Rules Screenshot](/assets/images/rules-screenshot.png)
+* If the user decides to view the rules section the How to Play title appears.  Instructions are made simple and easy to read.  The use of spaces and colour were deemed important in this section to separate between the different sections and highight some important words or phrases for the user to easily read and understand.
+
+    ![Rules Screenshot](/assets/images/rules-screenshot.jpg)
+
+* At the end of the How to Play section the game begins the same as if the users had chosen to skip the Rules and go straight to play.
+
+* The amount of guesses left is shown in red and the user is invited to make their first guess.
+
+**Player Guess Input**
+
+*  When the user enters their 4 number guess their guess is printed back to them as a list with the code hint underneath.  This was decided on as it gives clear feedback to the user what they entered and positions it on top of the code hint to keep it structured and clear what the guess and hints are.
+
+*   The code hint may be a mix of GREEN and ORANGE words with background colour matching.  Green was chosen as the colour that denotes correct.  So GREEN code hint represents correct number in correct position.  Orange was chosen as the colour denotes not quite correct but not incorrect.  So ORANGE code hint represents correct number but in incorrect position.
+
+*   The player is not informed of which number/s are incorrect completely as this would make the game easier.
+
+*   Only if none of the 4 numbers are enetered correctly, then the player is informed of this by a message in red lettering.  This is to prevent an empty code hint appearing, whcih may cause the player to think the game is not working correctly.
+
+*   Also, after the code hint the users is informed each time, how many attemps they have left to guess.  This is highlight in red to make it clear and stand out.
+
+    ![Guess Input Screenshot](/assets/images/guess-input-screenshot.png)
+
+
+**User Guess Input Validation & Feedback**
+
+The game will accept the users guess in the form of 4 numbers between 1-10 separated by a space.
+
+*   If the user happens to make an extra space at the begining or end of their guess, this is handeled by using the .strip() method.  This will automatically strip the white spaces from the begining and end of the input without raising the alarm to the user that their input was incorrect.
+
+*   If the user enters a number below 1 or above 10 they will be notified of their error and what to do to try again.
+
+* If the user enters words or special characters or any extra spaces between numbers or even just no input at all, they will be given feedback and a chance to enter again.
+
+![User Input Error](/assets/images/user-input-error.png)
+
+
+
+
+
+
+
+
+
 
 
 

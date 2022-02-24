@@ -135,30 +135,43 @@ The game will accept the users guess in the form of 4 numbers between 1-10 separ
 
 * There is also the Code Not Cracked title in the digital font to add a bit of extra fun and show the game is over.
 
-![Game Lost Screenshot](/assets/images/game-lost-screenshot.png)
+    ![Game Lost Screenshot](/assets/images/game-lost-screenshot.png)
 
 **Game Won**
 
+* If the user guesses correctly before their 10 attemps is up a Winner message displays.  The standard ascii fornt from pyfiglet is used to display this message as it is big and compliments the title at the start of the game.
+
+    ![Winner Screenshot](/assets/images/winner-screenshot.png)
+
 **Play Again**
+* In both the Game Lost and Game Winner scenarios the user is given the ption to play again.  Here user nput is validated for a Y or N.  Both capital and lower case are accepted and if there is an error the user is alerted to this and given the option again.
+
+    ![Play Again Error Screenshot](/assets/images/play-again-error.png)
 
 
+* if the user decides not to play again then a message saying goodbye and thanking them for playing is given.  The game is then quit by using the exit() method.
 
+![Quit Game Screenshot](/assets/images/quit-game.png)
 
+* If the user decides to play again then they are taken back to the start.  Incase the player needs to view the rules again or there is another person wanting to play next, the start of the game will allow for any of these scenarios by asking for name and giving the choice to view the rules again.
 
+* Import os was used to create a function using the os.system("clear") method to clear the screen on play gain for the user.  This helps to ensure the screen is cleared of the old game making it easier to read and better structure for the user.  
 
+* A message saying You Chose Yes! Let's Play is printed to vlidate the users response and showing the start of a new game.
 
+![Play Again Screenshot](/assets/images/play-again-screenshot.png)
 
+### Future Development & Features Left to Implement
 
+* This game is a one-player versus the computer.  In style wth the old Mastermind Board Game version this game could be made into a 2 player game.  As with the Board Game version the first player makes the code for the second player to guess.  After that player has won or lost, it is then their turn to create the code for the other player to now attempt to guess.  This could be easily implimented with the code already laid down.  Minor changes to the CodeGenerator clas could be implimented to allow for another player to enter the secret code instead of the computer randomly generating one.  The players input would need to be validated that it is in the correct order.
 
+* This game does not give the option yet to show high scores.  One approach could be implimenting Google Spreadsheets to store the amount of attempts it took for each name entered.
 
+* Other versions of the game could be implimented such as using colours for the scret code as in the Board Game style or using letters that correspond to words such as a Hangman or Wordle style game.
 
+* To make this game harder for different levels more numbers could be added to the secret code or less attempts given.  To make the game easier the player could be told which numbers are incorrect in the code hint by using the RED hint.
 
-
-
-
-
-
-### Features Left to Implement
+* This game was designed and created for the target audience of adults.  However, during testing some children aged 5 - 9 were given the opportunity to test and play.  With some minor changes to the instructions making them more easily interpreted for children of this age group, this game could be modified to reach a wider aged target audience.
 
 
 ### Data Model Design

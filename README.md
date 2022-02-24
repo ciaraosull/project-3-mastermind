@@ -248,6 +248,23 @@ The random library was imported to access the built in method of generating a ra
 
 ### Interesting Issues & Bugs Found
 
+1.  **Invalid Literal for int():**
+
+During testing, it was discovered that when the user entered their guess this error appeared: 
+
+> File "run.py", line 76, in start_game
+>
+>    guess = int(input("Please Enter your guess:\n"))
+>
+>ValueError: invalid literal for int() with base 10: '7 10 2 8'
+
+
+The [solution]( https://stackoverflow.com/questions/33292644/how-to-add-the-numbers-from-the-user-into-a-list
+) was to the split() method to convert the users input string to a list by splitting it on the spaces between.  To convert the string then to integers the map() method was used.
+
+>guess = list(map(int, input(""Please Enter your guess:").split(',')))
+
+
 ### Validator Testing
 
 ## Deployment

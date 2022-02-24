@@ -286,8 +286,8 @@ The [solution]( https://stackoverflow.com/questions/33292644/how-to-add-the-numb
 > From line 192
 >
 >       for i in range(0, 4):
->       if guess[i] in code:
->       matched_position = self.match_position(code, guess[i])
+>           if guess[i] in code:
+>               matched_position = self.match_position(code, guess[i])
 >       code[matched_position] = '-'
 >       guess[i] = ""
 >       code_hint_orange.append(f"{Fore.YELLOW}ORANGE{Fore.RESET}")
@@ -301,6 +301,8 @@ The [solution]( https://stackoverflow.com/questions/33292644/how-to-add-the-numb
 The site was deployed via [Heroku]( https://id.heroku.com/login), and the live link can be found here: [Mastermind – Code Breaker](https://mastermind-code-breaker.herokuapp.com) 
 
 This project was developed utilising the [Code Institute Template]( https://github.com/Code-Institute-Org/python-essentials-template).  Some of the deployment steps below are specifically required for the new CI template and may not be applicable to older versions, or different projects.
+
+Before deploying to Heroku pip3 freeze > requirements.txt was used to add pyfiglet and colorama imports for deployment.
 
 1.	Log in to [Heroku]( https://id.heroku.com/login) or create an account if required.
 2.	Then, click the button labelled **New** from the dashboard in the top right corner and from the drop-down menu select **Create New App**.
@@ -317,8 +319,10 @@ o	**Note:** The buildpacks must be in the correct order. If not click and drag t
 12.	Confirm you want to connect to GitHub.
 13.	Search for the repository name and click the connect button.
 14.	Scroll to the bottom of the deploy page and select preferred deployment type:
-o	Click either **Enable Automatic Deploys** for automatic deployment when you push updates to Github.
-o	Select the correct branch for deployment from the drop-down menu and click **Deploy Branch** for manual deployment.
+
+* Click either **Enable Automatic Deploys** for automatic deployment when you push updates to Github.
+
+* Select the correct branch for deployment from the drop-down menu and click **Deploy Branch** for manual deployment.
 
 
 ### Version Control

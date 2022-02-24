@@ -252,11 +252,12 @@ The random library was imported to access the built in method of generating a ra
 
 During testing, it was discovered that when the user entered their guess this error appeared: 
 
->> File "run.py", line 76, in start_game
->>
->>   guess = int(input("Please Enter your guess:\n"))
->>
->> ValueError: invalid literal for int() with base 10: '7 10 2 8'
+>
+>       File "run.py", line 76, in start_game
+>
+>       guess = int(input("Please Enter your guess:\n"))
+>
+>       ValueError: invalid literal for int() with base 10: '7 10 2 8'
 
 
 The [solution]( https://stackoverflow.com/questions/33292644/how-to-add-the-numbers-from-the-user-into-a-list

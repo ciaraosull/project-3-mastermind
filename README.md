@@ -252,6 +252,29 @@ The random library was imported to access the built in method of generating a ra
 
 ## Deployment
 
+The site was deployed via [Heroku]( https://id.heroku.com/login), and the live link can be found here: [Mastermind – Code Breaker](https://mastermind-code-breaker.herokuapp.com) 
+
+This project was developed utilising the [Code Institute Template]( https://github.com/Code-Institute-Org/python-essentials-template).  Some of the deployment steps below are specifically required for the new CI template and may not be applicable to older versions, or different projects.
+
+1.	Log in to [Heroku]( https://id.heroku.com/login) or create an account if required.
+2.	Then, click the button labelled **New** from the dashboard in the top right corner and from the drop-down menu select **Create New App**.
+3.	You must enter a unique app name, (I used mastermind-code-breaker).
+4.	Next, select your region, (I chose Europe as I am in Ireland).
+5.	Click on the **Create App** button.
+6.	The next page you will see is the project’s Deploy Tab.  Click on the **Settings Tab** and scroll down to **Config Vars**.
+7.	Click **Reveal Config Vars** and enter **port** into the **Key** box and **8000** into the **Value** box and click the **Add** button.
+8.	Next, scroll down to the Buildpack section click **Add Buildpack** select **python** and click **Save Changes**.
+9.	Repeat step 8 to add **node.js**.
+o	**Note:** The buildpacks must be in the correct order. If not click and drag them to move into correct order.
+10.	Scroll to top of page and now choose the **Deploy** tab.
+11.	Select **Github** as the deployment method.
+12.	Confirm you want to connect to GitHub.
+13.	Search for the repository name and click the connect button.
+14.	Scroll to the bottom of the deploy page and select preferred deployment type:
+o	Click either **Enable Automatic Deploys** for automatic deployment when you push updates to Github.
+o	Select the correct branch for deployment from the drop-down menu and click **Deploy Branch** for manual deployment.
+
+
 ### Version Control
 *   Git was used as the version control software. Commands such as git add ., git status, git commit and git push were used to add, save, stage and push the code to the GitHub repository where the source code is stored.
 

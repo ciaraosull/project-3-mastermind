@@ -252,6 +252,10 @@ The random library was imported to access the built in method of generating a ra
 
 ## Deployment
 
+### Version Control
+*   Git was used as the version control software. Commands such as git add ., git status, git commit and git push were used to add, save, stage and push the code to the GitHub repository where the source code is stored.
+
+
 ## Credits
 
 ## Acknowledgements

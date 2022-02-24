@@ -62,7 +62,7 @@ This game takes the users stories mentioned above into consideration to create a
 
 **Title Section:**
 
-* [Pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/#:~:text=pyfiglet%20takes%20ASCII%20text%20and,pyfiglet%20module%20%3A%20pip%20install%20pyfiglet)was installed and import pyfiglet was used to generate ascii art for the title and subtitle of the game.
+* [Pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/#:~:text=pyfiglet%20takes%20ASCII%20text%20and,pyfiglet%20module%20%3A%20pip%20install%20pyfiglet) was installed and import pyfiglet was used to generate ascii art for the title and subtitle of the game.
 
 * Standard Font was used for the title as it is large and has nice spacing and clarity of letters.  This was to give the user clarity of what the game is called.  It was centered to give a nice clean layout too.
 
@@ -87,9 +87,13 @@ This game takes the users stories mentioned above into consideration to create a
 
     ![Name Screen](/assets/images/name-screenshot.png)
 
+    * However, if the user presses anything other than inputting R or P an error will appear.  This game will accept capital R or small r and capital P or small p because the users input is changed to lowercase when inputted by using the .lower method.  The error message is in red to highlight to them that what was entered was incorrect and instuctions on what to do and to try enter R or P again.
+
+    ![Rules Error Screenshot](/assets/images/rules-error-screenshot.png)
+
 **Rules Section:**
 
-    ![Rules Screenshot](/assets/images/rules_screenshot.png)
+![Rules Screenshot](/assets/images/rules-screenshot.png)
 
 
 

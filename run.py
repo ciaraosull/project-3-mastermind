@@ -153,7 +153,7 @@ class CodeGenerator:
         random_nums = []
         # using list comprehension + randint()
         # to generate random number list
-        for i in range(4):
+        for nums in range(4):
             random_nums.append(random.randint(1, max_range))
         return random_nums
 

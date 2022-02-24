@@ -252,17 +252,39 @@ The random library was imported to access the built in method of generating a ra
 
 During testing, it was discovered that when the user entered their guess this error appeared: 
 
-> File "run.py", line 76, in start_game
->
->    guess = int(input("Please Enter your guess:\n"))
->
->ValueError: invalid literal for int() with base 10: '7 10 2 8'
+>> File "run.py", line 76, in start_game
+>>
+>>   guess = int(input("Please Enter your guess:\n"))
+>>
+>> ValueError: invalid literal for int() with base 10: '7 10 2 8'
 
 
 The [solution]( https://stackoverflow.com/questions/33292644/how-to-add-the-numbers-from-the-user-into-a-list
 ) was to the split() method to convert the users input string to a list by splitting it on the spaces between.  To convert the string then to integers the map() method was used.
 
->guess = list(map(int, input(""Please Enter your guess:").split(',')))
+>> guess = list(map(int, input(""Please Enter your guess:").split(',')))
+
+
+2.  **Code Hint - Find Position Function**
+
+*   There were a few approaches to take with this game and how to generate a Code Hint.  I decided on taking the users guess and the code hint and loop through to compare anything that matched.  If the number matched then a '-' was replaced in one list and a ' ' replaced in the other so there was no confusion of the symbols matching during the loop.  For every match GREEN was placed in the new code list using the .append() method.  
+
+*   However, a problem arose then trying to use this logic to loop through to find a matched number in the incorrect position.  It was only finding some matched numbers in the incorrect position not all of them.  The solution was to create a separate function to loop through.  This function was then used to check against each one of the numbers in the users guess.  The same logic then applied to replace with '-' or ' ' and append ORANGE to the new code hint list.
+
+>> def match_position(self, secret_code, user_guess):
+>>
+>>        for nums in range(0, 4):
+>>        if secret_code[nums] == user_guess:
+>>                    return nums
+
+
+>>        for i in range(0, 4):
+>>                if guess[i] in code:
+>>                    matched_position = self.match_position(code, guess[i])
+>>                    code[matched_position] = '-'
+>>                    guess[i] = ""
+>>                    code_hint_orange.append(f"{Fore.YELLOW}ORANGE{Fore.RESET}")
+        
 
 
 ### Validator Testing

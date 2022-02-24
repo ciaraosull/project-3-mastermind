@@ -126,7 +126,21 @@ The game will accept the users guess in the form of 4 numbers between 1-10 separ
 
 * If the user enters words or special characters or any extra spaces between numbers or even just no input at all, they will be given feedback and a chance to enter again.
 
-![User Input Error](/assets/images/user-input-error.png)
+    ![User Input Error](/assets/images/user-input-error.png)
+
+
+**Game Lost**
+
+* If the player runs out of guesses and still has not revealed the secret code they will be informed and shown the secret code they were trying to guess.
+
+* There is also the Code Not Cracked title in the digital font to add a bit of extra fun and show the game is over.
+
+![Game Lost Screenshot](/assets/images/game-lost-screenshot.png)
+
+**Game Won**
+
+**Play Again**
+
 
 
 

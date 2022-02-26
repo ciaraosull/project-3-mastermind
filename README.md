@@ -16,11 +16,11 @@ In this game Mastermind – Code Breaker, users play to crack the secret code ra
 
 *   The secret code is 4 numbers between 1 - 10 and any of these numbers may be repeated.
 
-* The player has 10 attempts to guess the sceret code.  The correct guess must be all 4 correct numbers in the correct order.
+* The player has 10 attempts to guess the secret code.  The correct guess must be all 4 correct numbers in the correct order.
 
 * After every attempt (unless successful) the player is given a code hint.  Every GREEN represents how many numbers were correct and in the correct position.  Every ORANGE represents how many numbers were correct but in the incorrect position.  
 
-* The code hint og GREENs and ORANGEs are do not match the order of the players numbers in their guess.
+* The code hint of GREENs and ORANGEs do not match the order of the players numbers in their guess to make the game more challenging.
 
 >
 >**For example:**
@@ -31,13 +31,10 @@ In this game Mastermind – Code Breaker, users play to crack the secret code ra
 >
 >       code hint will be: GREEN GREEN ORANGE
 >
->       This represent 1 & 4 as two GREENs and 3 as ORANGE
+>       This represents 1 & 4 as two GREENs and 3 as ORANGE
 
 
-
-* If none of the 4 numbers are correct, the player will recieve feedback to state this, otherwise they will not be told which numbers are incorrect.
-
-
+* If none of the 4 numbers are correct, the player will receive feedback to state this, otherwise they will not be told which numbers are incorrect.
 
 
 ## User Experience (UX)
@@ -56,7 +53,7 @@ As a User I want to:
 * have the choice to easily play again or quit
 
 ### User Experience in this Game
-This game takes the users stories mentioned above into consideration to create a positive UX.  The users experience is discussed in more detail below with examples in the Design & Features Sections.
+This game takes the users' stories mentioned above into consideration to create a positive UX.  The users experience is discussed in more detail below with examples in the Design & Features Sections.
 
 ## Features
 
@@ -64,54 +61,54 @@ This game takes the users stories mentioned above into consideration to create a
 
 * [Pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/#:~:text=pyfiglet%20takes%20ASCII%20text%20and,pyfiglet%20module%20%3A%20pip%20install%20pyfiglet) was installed and import pyfiglet was used to generate ascii art for the title and subtitle of the game.
 
-* Standard Font was used for the title as it is large and has nice spacing and clarity of letters.  This was to give the user clarity of what the game is called.  It was centered to give a nice clean layout too.
+* Standard Font was used for the title as it is large and has nice spacing and clarity of letters.  This was to give the user clarity of what the game is called.  It was centred to give a nice clean layout too.
 
-* For the subtitle the font used was digital.  Although not as clear as the standard fornt, it was used for fun and uniquness to give the user the feeling of the letters being 'locked-in' to compliment the theme of the game.
+* For the subtitle the font used was digital.  Although not as clear as the standard font, it was used for fun and uniqueness to give the user the feeling of the letters being 'locked-in' to compliment the theme of the game.
 
-* The authours name was centered too to separate it from the game play area and coloured using Coolor to help it stand out and make the first part of the game bright for the user.
+* The authour's name was centred too to separate it from the game play area and coloured using Coolor to help it stand out and make the first part of the game bright for the user.
 
-* A friendly message to the user to enter their name is seen first. This alerst the user to how to start playing the game.
+* A friendly message to the user to enter their name is seen first. This alerts the user on how to start playing the game.
 
 
     ![Title](assets/images/title_screenshot.png)
 
-* However, if the user presses enter without inputting a name an error will appear.  This game will accept any characters or numbers for a name as the user may wish to use a nickname or a fun made up name.  However, if nothing at all is entered then the user is shown a message in red to highlight to them that nothing was entered and instuctions on what to do and to try enter a name again.
+* However, if the user presses enter without inputting a name an error will appear.  This game will accept any characters or numbers for a name as the user may wish to use a nickname or a fun made up name.  However, if nothing at all is entered then the user is shown a message in red to highlight to them that nothing was entered and instructions on what to do and to try enter a name again.
 
     ![Name Error](/assets/images/name-error-screensht.png)
 
 **Name Input Section:**
 
-* After the user is asked to input their name, they are greeted with a Welcome message with their name returned in colour,  This was to add some fun personalisation and interactivity for the user.
+* After the user is asked to input their name, they are greeted with a Welcome message with their name returned in colour.  This was to add some fun personalisation and interactivity for the user.
 
 * The user is then asked if they would like to Play straight away or view the Rules of the game.  Both these words are highlighted in different colours to show the 2 options clearly to the user.  The purpose of this was in case the user is returning they may not wish to have the screen cluttered with the rules of how to play and would just like to start straight away.
 
     ![Name Screen](/assets/images/name-screenshot.png)
 
-* However, if the user presses anything other than inputting R or P an error will appear.  This game will accept capital R or small r and capital P or small p because the users input is changed to lowercase when inputted by using the .lower method.  The error message is in red to highlight to them that what was entered was incorrect and instuctions on what to do and to try enter R or P again.
+* However, if the user presses anything other than inputting R or P an error will appear.  This game will accept capital R or small r and capital P or small p because the user's input is changed to lowercase when inputted by using the .lower method.  The error message is in red to highlight to them that what was entered was incorrect and instructions on what to do and to try enter R or P again.
 
     ![Rules Error Screenshot](/assets/images/rules-error-screenshot.png)
 
 **Rules Section:**
 
-* If the user decides to view the rules section the How to Play title appears.  Instructions are made simple and easy to read.  The use of spaces and colour were deemed important in this section to separate between the different sections and highight some important words or phrases for the user to easily read and understand.
+* If the user decides to view the rules section the How to Play title appears.  Instructions are made simple and easy to read.  The use of spaces and colour were deemed important in this section to separate between the different sections and highlight some important words or phrases for the user to easily read and understand.
 
     ![Rules Screenshot](/assets/images/rules-screenshot.jpg)
 
-* At the end of the How to Play section the game begins the same as if the users had chosen to skip the Rules and go straight to play.
+* At the end of the How to Play section the game begins the same as if the user had chosen to skip the Rules and go straight to play.
 
 * The amount of guesses left is shown in red and the user is invited to make their first guess.
 
 **Player Guess Input**
 
-*  When the user enters their 4 number guess their guess is printed back to them as a list with the code hint underneath.  This was decided on as it gives clear feedback to the user what they entered and positions it on top of the code hint to keep it structured and clear what the guess and hints are.
+*  When the user enters their 4 number guess their guess is printed back to them as a list with the code hint underneath.  This was decided on as it gives clear feedback to the user what they entered and positions it on top of the code hint to keep it structured and clear as to what the guess and hints are.
 
-*   The code hint may be a mix of GREEN and ORANGE words with background colour matching.  Green was chosen as the colour that denotes correct.  So GREEN code hint represents correct number in correct position.  Orange was chosen as the colour denotes not quite correct but not incorrect.  So ORANGE code hint represents correct number but in incorrect position.
+*   The code hint may be a mix of GREEN and ORANGE words with background colour matching.  Green was chosen as the colour that denotes correct.  So GREEN code hint represents a correct number in correct position.  Orange was chosen as the colour denotes not quite correct but not incorrect.  So ORANGE code hint represents a correct number but in an incorrect position.
 
-*   The player is not informed of which number/s are incorrect completely as this would make the game easier.
+*   The player is not informed as to which number/s are incorrect or correct as this would make the game easier.
 
-*   Only if none of the 4 numbers are enetered correctly, then the player is informed of this by a message in red lettering.  This is to prevent an empty code hint appearing, whcih may cause the player to think the game is not working correctly.
+*   Only if none of the 4 numbers are entered correctly, then the player is informed of this by a message in red lettering.  This is to prevent an empty code hint appearing, which may cause the player to think the game is not working correctly.
 
-*   Also, after the code hint the users is informed each time, how many attemps they have left to guess.  This is highlight in red to make it clear and stand out.
+*   Also, after the code hint the user is informed each time, how many attempts they have left to guess.  This is highlighted in red to make it clear and stand out.
 
     ![Guess Input Screenshot](/assets/images/guess-input-screenshot.png)
 
@@ -120,11 +117,11 @@ This game takes the users stories mentioned above into consideration to create a
 
 The game will accept the users guess in the form of 4 numbers between 1-10 separated by a space.
 
-*   If the user happens to make an extra space at the begining or end of their guess, this is handeled by using the .strip() method.  This will automatically strip the white spaces from the begining and end of the input without raising the alarm to the user that their input was incorrect.
+*   If the user happens to make an extra space at the beginning or end of their guess, this is handled by using the .strip() method.  This will automatically strip the white spaces from the beginning and end of the input without raising the alarm to the user that their input was entered incorrectly.
 
 *   If the user enters a number below 1 or above 10 they will be notified of their error and what to do to try again.
 
-* If the user enters words or special characters or any extra spaces between numbers or even just no input at all, they will be given feedback and a chance to enter again.
+* If the user enters words or special characters or any extra spaces between numbers, or even just no input at all, they will be given feedback and a chance to enter again.
 
     ![User Input Error](/assets/images/user-input-error.png)
 
@@ -139,35 +136,35 @@ The game will accept the users guess in the form of 4 numbers between 1-10 separ
 
 **Game Won**
 
-* If the user guesses correctly before their 10 attemps is up a Winner message displays.  The standard ascii fornt from pyfiglet is used to display this message as it is big and compliments the title at the start of the game.
+* If the user guesses correctly before their 10 attempts are up, a Winner message displays.  The standard ascii front from pyfiglet is used to display this message as it is big and compliments the title at the start of the game.
 
     ![Winner Screenshot](/assets/images/winner-screenshot.png)
 
+
 **Play Again**
-* In both the Game Lost and Game Winner scenarios the user is given the ption to play again.  Here user nput is validated for a Y or N.  Both capital and lower case are accepted and if there is an error the user is alerted to this and given the option again.
+* In both the Game Lost and Game Winner scenarios, the user is given the option to play again.  Here user input is validated for a Y or N.  Both capital and lower case are accepted and if there is an error the user is alerted to this and given the option again.
 
     ![Play Again Error Screenshot](/assets/images/play-again-error.png)
 
-
-* if the user decides not to play again then a message saying goodbye and thanking them for playing is given.  The game is then quit by using the exit() method.
+* If the user decides not to play again then a message saying goodbye and thanking them for playing is given.  The game is then quit by using the exit() method.
 
 ![Quit Game Screenshot](/assets/images/quit-game.png)
 
-* If the user decides to play again then they are taken back to the start.  Incase the player needs to view the rules again or there is another person wanting to play next, the start of the game will allow for any of these scenarios by asking for name and giving the choice to view the rules again.
+* If the user decides to play again then they are taken back to the start.  In case the player needs to view the rules again or there is another person wanting to play next, the start of the game will allow for any of these scenarios by asking for name and giving the choice to view the rules again.
 
 * Import os was used to create a function using the os.system("clear") method to clear the screen on play gain for the user.  This helps to ensure the screen is cleared of the old game making it easier to read and better structure for the user.  
 
-* A message saying You Chose Yes! Let's Play is printed to vlidate the users response and showing the start of a new game.
+* A message saying You Chose Yes! Let's Play is printed to validate the user’s response and showing the start of a new game.
 
 ![Play Again Screenshot](/assets/images/play-again-screenshot.png)
 
 ### Future Development & Features Left to Implement
 
-* This game is a one-player versus the computer.  In style wth the old Mastermind Board Game version this game could be made into a 2 player game.  As with the Board Game version the first player makes the code for the second player to guess.  After that player has won or lost, it is then their turn to create the code for the other player to now attempt to guess.  This could be easily implimented with the code already laid down.  Minor changes to the CodeGenerator clas could be implimented to allow for another player to enter the secret code instead of the computer randomly generating one.  The players input would need to be validated that it is in the correct order.
+* This game is a one-player versus the computer.  In style with the old Mastermind Board Game version this game could be made into a 2 player game.  As with the Board Game version the first player makes the code for the second player to guess.  After that player has won or lost, it is then their turn to create the code for the other player to now attempt to guess.  This could be easily implemented with the code already laid down.  Minor changes to the CodeGenerator class could be implemented to allow for another player to enter the secret code instead of the computer randomly generating one.  The players input would need to be validated that it meets the correct criteria.
 
-* This game does not give the option yet to show high scores.  One approach could be implimenting Google Spreadsheets to store the amount of attempts it took for each name entered.
+* This game does not give the option yet to show high scores.  One approach could be implement a Google Spreadsheet to store the amount of attempts it took for each name entered.  This scoreboard could then be displayed by printing the contents of it to the terminal.
 
-* Other versions of the game could be implimented such as using colours for the scret code as in the Board Game style or using letters that correspond to words such as a Hangman or Wordle style game.
+* Other versions of the game could be implemented such as using colours for the secret code as in the Board Game style or using letters that correspond to words such as a Hangman or Wordle style game.
 
 * To make this game harder for different levels more numbers could be added to the secret code or less attempts given.  To make the game easier the player could be told which numbers are incorrect in the code hint by using the RED hint.
 
@@ -180,9 +177,9 @@ The game will accept the users guess in the form of 4 numbers between 1-10 separ
 
 Unified Modelling Language (UML) was used to visualize the various features of the game. 
 
-* A Use Case Diagram was drafted to capture the games functionaity and relationships with the user.
+* A Use Case Diagram was drafted to capture the games functionality and relationships with the user.
 
-* The Matermind Game is the system represented by the rectangle below.  The external object is the Primary Actor.  In this game it will be the Player that initiates the use of the system.
+* The Mastermind Game is the system represented by the rectangle below.  The external object is the Primary Actor.  In this game it will be the Player that initiates the use of the system.
 
 * The Use Case in the diagram below are represented in circles and these are the actions that will initiate different tasks within the game.
 
@@ -190,13 +187,15 @@ Unified Modelling Language (UML) was used to visualize the various features of t
 
 ![Use Case Diagram](assets/images/use-case-diagram.png)
 
+
 **Classes**
 
-Throughout this project, I have opted to use Object Oriented Programming. From the Use Case Diagram the Classes were created.  The game consists of two classes, the Player & the CodeGenerator.  Both of these classes have asscociated methods.  The class diagram below was used to decide what each class does and then design the methods each class should have.
+Throughout this project, I have opted to use Object Oriented Programming. From the Use Case Diagram the Classes were created.  The game consists of two classes, the Player & the CodeGenerator.  Both of these classes have associated methods.  The class diagram below was used to decide what each class does and then design the methods each class should have.
 
-The classes and their asscociated methods are stored in separate files to allow for separating the code into parts that hold related data and functionality.  This will allow any future expansion and development of this project to have a clear structure and also for any code re-use and sharing as well as maintenance.
+The classes and their associated methods are stored in separate files to allow for separating the code into parts that hold related data and functionality.  This will allow any future expansion and development of this project to have a clear structure and also for any code re-use and sharing as well as maintenance.
 
 ![Class Diagram](assets/images/class-diagram.png)
+
 
 **Flow Control**
 
@@ -232,7 +231,7 @@ The os library was imported to create a function to utilise the os.system to cle
 
 *   random
 
-The random library was imported to access the built in method of generating a random number selection using the ranint() method.  This then is used to generate a random sequence of 4 numbers from a range of 1 – 10 for the secret code the user has to crack.
+The random library was imported to access the built in method of generating a random number selection using the randint() method.  This then is used to generate a random sequence of 4 numbers from a range of 1 – 10 for the secret code the user has to crack.
 
 **Other**
 * [Colorama](https://pypi.org/project/colorama/) for adding colour to fonts.
@@ -260,7 +259,7 @@ The random library was imported to access the built in method of generating a ra
     As this will accept anything but nothing entered, the enter key was pressed to ensure error caught and handled appropriately.
 
     *   Player Choice:
-    To test captital and small R and P were typed in and also other random inputs such as spaces, other letters, words or numbers to ensure error caught and handled appropriately.
+    To test capital and small R and P were typed in and also other random inputs such as spaces, other letters, words or numbers to ensure error caught and handled appropriately.
 
     *   Player Guess:
     As this will only accept 4 numbers between 1-10 separated by a space, many other combinations of input were tested.  For example, more or less numbers were entered, numbers less than 1 or greater than 10 were entered.  Numbers without spaces or extra spaces and also random special characters and no entry at all were all tested to ensure errors caught and handled appropriately.
@@ -269,7 +268,7 @@ The random library was imported to access the built in method of generating a ra
     The secret code was printed to the terminal during development to help with testing the code hint generated matched the players guesses.  It was checked to ensure numbers in correct position generated a GREEN hint and numbers in incorrect position generated ORANGE hint.  If all 4 numbers were not correct the message in red appeared as expected.
 
     *   Attempts Left:
-    Atempts left was checked by playing the game through to see if guesses left decreased by 1 each time and also that guesses left did not change if an input error was entered.
+    Attempts left was checked by playing the game through to see if guesses left decreased by 1 each time and also that guesses left did not change if an input error was entered.
 
     *   Game Won / Game Lost
     The game was tested on winning and loosing to ensure the correct messages were displayed for both.
@@ -383,7 +382,7 @@ Before deploying to Heroku pip3 freeze > requirements.txt was used to add pyfigl
 7.	Click **Reveal Config Vars** and enter **port** into the **Key** box and **8000** into the **Value** box and click the **Add** button.
 8.	Next, scroll down to the Buildpack section click **Add Buildpack** select **python** and click **Save Changes**.
 9.	Repeat step 8 to add **node.js**.
-o	**Note:** The buildpacks must be in the correct order. If not click and drag them to move into correct order.
+o	**Note:** The Buildpacks must be in the correct order. If not click and drag them to move into correct order.
 10.	Scroll to top of page and now choose the **Deploy** tab.
 11.	Select **Github** as the deployment method.
 12.	Confirm you want to connect to GitHub.
@@ -398,10 +397,7 @@ o	**Note:** The buildpacks must be in the correct order. If not click and drag t
 ### Version Control
 *   Git was used as the version control software. Commands such as git add ., git status, git commit and git push were used to add, save, stage and push the code to the GitHub repository where the source code is stored.
 
-
 ## Credits
-
-Content
 
 Some helpful tutorials I used to help me with coding some of the design ideas were:
 
@@ -448,4 +444,3 @@ Other resources used to learn were:
 ## Acknowledgements
 
 This project was made possible due to the help, advice and support of my Code Institue Tutor Kasia, my Mentor Daisy and all the lovely people on the Code Institue Slack community.
-

@@ -244,6 +244,36 @@ The random library was imported to access the built in method of generating a ra
 *   Microsoft Photos to edit, crop and save images of charts and diagrams
 
 ## Testing
+*   Methods such as print() as the code developed was used to check for errors.  This helped check everything was behaving as expected and functions such as generating the random numbers for the secret code were being generated correctly.  
+
+*   Any testing user inputs were printed back to the console to check all functions and methods were correctly applied to the input.  
+
+*   Errors or warnings were fixed as they appeared such as indentation errors, lines too long or extra space issues.  This helped keep the code clean and readable so other errors or bugs that arose where identified more easily.
+
+*   After deployment all features were checked on laptop, mobile (Samsung Galaxy & iPhone 8). The site was sent to peers to check from their devices that all features functioned correctly and feedback on functionality was positive across all devices checked such as PC, Laptop, Tablets and Mobiles (Android & IOS). The website was checked on Chrome, Firefox and Edge.
+
+*   The game was deployed early on in development and checked regularly to ensure game flow and any errors were handled early on.
+
+*   Testing inputs were used to ensure user inputs would be handled correctly and appropriate feedback to the user was shown on screen.  As mentioned above in the Features Section for how user inputs were handled.
+
+    *   User Name:
+    As this will accept anything but nothing entered, the enter key was pressed to ensure error caught and handled appropriately.
+
+    *   Player Choice:
+    To test captital and small R and P were typed in and also other random inputs such as spaces, other letters, words or numbers to ensure error caught and handled appropriately.
+
+    *   Player Guess:
+    As this will only accept 4 numbers between 1-10 separated by a space, many other combinations of input were tested.  For example, more or less numbers were entered, numbers less than 1 or greater than 10 were entered.  Numbers without spaces or extra spaces and also random special characters and no entry at all were all tested to ensure errors caught and handled appropriately.
+
+    *   Code Hint:
+    The secret code was printed to the terminal during development to help with testing the code hint generated matched the players guesses.  It was checked to ensure numbers in correct position generated a GREEN hint and numbers in incorrect position generated ORANGE hint.  If all 4 numbers were not correct the message in red appeared as expected.
+
+    *   Attempts Left:
+
+    *   Game Won / Game Lost
+
+    * Play Again
+
 
 ### Interesting Issues & Bugs Found
 

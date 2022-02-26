@@ -277,6 +277,8 @@ The random library was imported to access the built in method of generating a ra
     * Play Again
     As mentioned above in the Features section.  To play again the user can type Y or N.  This was tested for lower and uppercase Y and N to check both worked.  Other inputs such as numbers, random words or letters and the enter key pressed were all checked to ensure the errors were handled correctly and appropriate feedback to the user was given.
 
+*   The README.md was proof-read and all links were checked before final submission.
+
 
 ### Interesting Issues & Bugs Found
 
@@ -358,6 +360,12 @@ The [solution]( https://stackoverflow.com/questions/33292644/how-to-add-the-numb
 
 
 ### Validator Testing
+
+[pep8 online](http://pep8online.com/) was used for validating the python files.  All python files were checked with no errors reported.
+
+![Pep8 Results Screenshot](/assets/images/pep-validate-screenshot.png)
+
+
 
 ## Deployment
 

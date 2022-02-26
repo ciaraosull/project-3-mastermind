@@ -172,7 +172,7 @@ class CodeGenerator:
         code_hint_green = []
         code_hint_orange = []
         # Variables to put back in a list to
-        # check against agin on next guess
+        # check against again on next guess
         guess = list(user_guess)
         code = list(secret_code)
 

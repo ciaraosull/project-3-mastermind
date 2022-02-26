@@ -204,7 +204,6 @@ To design the order in which individual statements, instructions or function cal
 
 ![Flowchart](assets/images/flowchart.png)
 
-
 ### Aesthetic Design
 
 **Fonts**
@@ -289,10 +288,33 @@ The [solution]( https://stackoverflow.com/questions/33292644/how-to-add-the-numb
 >       for i in range(0, 4):
 >           if guess[i] in code:
 >               matched_position = self.match_position(code, guess[i])
->       code[matched_position] = '-'
->       guess[i] = ""
->       code_hint_orange.append(f"{Fore.YELLOW}ORANGE{Fore.RESET}")
+>               code[matched_position] = '-'
+>               guess[i] = ""
+>               code_hint_orange.append(f"{Fore.YELLOW}ORANGE{Fore.RESET}")
 
+
+3. **Code Hint & Guess Lists**
+
+*   After the user made their first guess, every guess after that was returning an empty code hint list.  The problem was  the code hint list was empty as nothing was being compared after first check.  The solution was to create 2 new variables to copy back in a list to check against again on next guess.
+
+    ![Code Hint Bug](/assets/images/copy-lists-bug-screenshot.png)
+
+>
+> From line 176
+>
+>       guess = list(user_guess)
+>       code = list(secret_code)
+
+
+4. **Code Hint Background Colour**
+
+*   A problem arose using colorama for the background colour on the Code Hint words GREEN & ORANGE.
+
+    ![Code Hint Colour](/assets/images/code-hint-colour.png)
+
+After some [reseach](https://stackoverflow.com/questions/67172409/is-there-a-way-to-color-individual-elements-in-a-list-in-python), it was realised that as lists don't have a concept of colour.  To make the list print with certain colours for each GREEN & ORANGE I needed to print each item in the list.  
+
+To do this 2 new lists were made, 1 for GREEN and 1 for ORANGE.  Then append and join both lists.  The Code Hint variable is now each item in the list looped through so colorama works on print.
 
 
 ### Validator Testing

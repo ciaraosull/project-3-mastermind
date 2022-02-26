@@ -418,8 +418,6 @@ Some helpful tutorials I used to help me with coding some of the design ideas we
 
 Some resources that helped fix particular issues or learn to impliment specific features were:
 
-*   [Declaring Unused Variables in List Comprehensions  - Using Underscore](https://www.youtube.com/watch?v=cZb5aFcpsAs)
-
 *   [Difference between staticmethods & classmethods](https://stackoverflow.com/questions/136097/difference-between-staticmethod-and-classmethod/1669524#1669524)
 
 *   [Building Beautiful CLI in Python](https://codeburst.io/building-beautiful-command-line-interfaces-with-python-26c7e1bb54df)

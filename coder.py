@@ -2,12 +2,6 @@
 # import random for generating random numbers for secret
 import random
 
-# import main for play again function
-# from run import play_again
-
-# import pyfiglet module for ascii art
-# import pyfiglet
-
 # import colorama for adding colour
 import colorama
 from colorama import Fore

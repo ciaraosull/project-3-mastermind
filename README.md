@@ -366,7 +366,6 @@ The [solution]( https://stackoverflow.com/questions/33292644/how-to-add-the-numb
 ![Pep8 Results Screenshot](/assets/images/pep-validate-screenshot.png)
 
 
-
 ## Deployment
 
 The site was deployed via [Heroku]( https://id.heroku.com/login), and the live link can be found here: [Mastermind – Code Breaker](https://mastermind-code-breaker.herokuapp.com) 
@@ -402,5 +401,49 @@ o	**Note:** The buildpacks must be in the correct order. If not click and drag t
 
 ## Credits
 
+Content
+
+Some helpful tutorials I used to help me with coding some of the design ideas were:
+
+*   [Python Tutorials by The Net Ninja](https://www.youtube.com/watch?v=H--VDcDSHdg) - This one on classes was very helpful
+
+*   [Ask Python - Mastermind Game](https://www.askpython.com/python/examples/create-mastermind-game-in-python)
+
+*   [Mastermind Game in Python Tutorial](https://www.youtube.com/watch?v=NLfxNo7Q0Pk&feature=youtu.be)
+
+*   [Mastermind in Python](https://bnbasilio.medium.com/mastermind-a-how-to-in-python-7b80ca9809ab)
+
+*   [GeeksforGeeks Mastermind in Python](https://www.geeksforgeeks.org/mastermind-game-using-python/)
+
+
+Some resources that helped fix particular issues or learn to impliment specific features were:
+
+*   [Building Beautiful CLI in Python](https://codeburst.io/building-beautiful-command-line-interfaces-with-python-26c7e1bb54df)
+
+*   [How to Generate ASCII Art](https://levelup.gitconnected.com/python-ascii-art-generator-60ba9eb559d7)
+
+*   [Adding ASCII Art](https://learnlearn.uk/python/ascii-art/)
+
+*   [ASCII Art Library on Figlet.org](http://www.figlet.org/)
+
+*   [Python Console Colours Tutorial](https://www.youtube.com/watch?v=u4QmAIoo4i0)
+
+*   [Enter Key Pressed Error](https://stackoverflow.com/questions/61075071/code-for-enter-key-press-without-any-input-in-python)
+
+*   [Align Center in Python](https://stackoverflow.com/questions/44781484/python-string-formatter-align-center)
+
+*   [UML Use Case Diagrams](https://www.youtube.com/watch?v=zid-MVo7M-E)
+
+*   [UML Class Diagrams](https://www.youtube.com/watch?v=UI6lqHOVHic)
+
+
+Other resources used to learn were:
+
+*   [W3Schools - Python](https://www.w3schools.com/python/)
+
+*   Stack Overflow - see various links above in README for specific links to particular topics.
+
 ## Acknowledgements
+
+This project was made possible due to the help, advice and support of my Code Institue Tutor Kasia, my Mentor Daisy and all the lovely people on the Code Institue Slack community.
 

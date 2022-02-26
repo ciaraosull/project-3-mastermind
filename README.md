@@ -269,10 +269,13 @@ The random library was imported to access the built in method of generating a ra
     The secret code was printed to the terminal during development to help with testing the code hint generated matched the players guesses.  It was checked to ensure numbers in correct position generated a GREEN hint and numbers in incorrect position generated ORANGE hint.  If all 4 numbers were not correct the message in red appeared as expected.
 
     *   Attempts Left:
+    Atempts left was checked by playing the game through to see if guesses left decreased by 1 each time and also that guesses left did not change if an input error was entered.
 
     *   Game Won / Game Lost
+    The game was tested on winning and loosing to ensure the correct messages were displayed for both.
 
     * Play Again
+    As mentioned above in the Features section.  To play again the user can type Y or N.  This was tested for lower and uppercase Y and N to check both worked.  Other inputs such as numbers, random words or letters and the enter key pressed were all checked to ensure the errors were handled correctly and appropriate feedback to the user was given.
 
 
 ### Interesting Issues & Bugs Found

@@ -3,10 +3,10 @@
 import random
 
 # import main for play again function
-# from run import playagain
+# from run import play_again
 
 # import pyfiglet module for ascii art
-import pyfiglet
+# import pyfiglet
 
 # import colorama for adding colour
 import colorama
@@ -51,25 +51,18 @@ class CodeGenerator:
         guess = list(user_guess)
         code = list(secret_code)
 
-        if guess == code:
-            win_msg = pyfiglet.figlet_format(
-                "Winner!", font="standard")
-            print(win_msg)
-            play_again()
+        for i in range(0, 4):
+            if guess[i] == code[i]:
+                code[i] = "-"
+                guess[i] = ""
+                code_hint_green.append(f"{Fore.GREEN}GREEN{Fore.RESET}")
 
-        else:
-            for i in range(0, 4):
-                if guess[i] == code[i]:
-                    code[i] = "-"
-                    guess[i] = ""
-                    code_hint_green.append(f"{Fore.GREEN}GREEN{Fore.RESET}")
-
-            for i in range(0, 4):
-                if guess[i] in code:
-                    matched_position = self.match_position(code, guess[i])
-                    code[matched_position] = '-'
-                    guess[i] = ""
-                    code_hint_orange.append(f"{Fore.YELLOW}ORANGE{Fore.RESET}")
+        for i in range(0, 4):
+            if guess[i] in code:
+                matched_position = self.match_position(code, guess[i])
+                code[matched_position] = '-'
+                guess[i] = ""
+                code_hint_orange.append(f"{Fore.YELLOW}ORANGE{Fore.RESET}")
 
         # Iterate through each item and
         # join both lists for printing colour with colorama

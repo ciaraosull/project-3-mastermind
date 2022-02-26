@@ -99,9 +99,16 @@ def main():
             # assigning variable user_guess to the method
             # that asks user for their guess
             user_guess = player.start_game()
-            # calling the instance methods using the object coder
-            coder.calculate_code_hint(secret_code, user_guess)
-            coder.match_position(secret_code, user_guess)
+
+            if user_guess == secret_code:
+                win_msg = pyfiglet.figlet_format(
+                    "Winner!", font="standard")
+                print(win_msg)
+                play_again()
+            else:
+                # calling the instance methods using the object coder
+                coder.calculate_code_hint(secret_code, user_guess)
+                coder.match_position(secret_code, user_guess)
 
 
 if __name__ == "__main__":

@@ -6,7 +6,13 @@ colorama.init(autoreset=True)
 
 
 class Player:
-    """ Initialises instance """
+    """ 
+    Creates player object and gives it the ability to
+    take the user's name, give the choice to the user
+    if they want rules displayed,
+    take the user's guesses and validate
+    all the user's input
+    """
     # def __init__(self):
     # pass
 

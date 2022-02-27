@@ -26,11 +26,12 @@ class Player:
         """
         Validates user input for name
         """
-        # add in if name is equal to just a space too
-        # If nothing entered then return error,
+        # If nothing entered eg. only spacebar pressed
+        # or just enter hit then return error,
         # otherwise accept all characters for name / nickname
         try:
-            if name == "":
+            if len(name.strip()) == 0:
+                # if name == "":
                 raise ValueError("Please input some type of name\n")
 
         except ValueError as error:

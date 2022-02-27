@@ -10,10 +10,13 @@ colorama.init(autoreset=True)
 
 class CodeGenerator:
     """
-    Initialises instance
+    Creates coder object and gives it the ability to
+    generate the random secret code, finds the matches
+    in the user's guess and the secret code and generates
+    the code hint for the user
     """
-    def __init__(self):
-        pass
+    # def __init__(self):
+    #    pass
 
     def random_code(self, max_range):
         """

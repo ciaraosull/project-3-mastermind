@@ -1,20 +1,20 @@
 """ Mastermind Game imports """
-# import player class
-from player import Player
-
-# import CodeGenerator class
-from coder import CodeGenerator
-
 # import os to help clear terminal for user on replay
 import os
-
-# import pyfiglet module for ascii art
-import pyfiglet
 
 # import colorama for adding colour
 import colorama
 from colorama import Fore
 colorama.init(autoreset=True)
+
+# import pyfiglet module for ascii art
+import pyfiglet
+
+# import player class
+from player import Player
+
+# import CodeGenerator class
+from coder import CodeGenerator
 
 
 def clear():
@@ -71,7 +71,7 @@ def main():
     # create objects of the classes to invoke constructors
     player = Player()
     coder = CodeGenerator()
-    # calling the instance methods using the object player
+    # calling the methods using the object player
     player.get_name()
     player.game_choice()
     # assigning variable secret_code to the method
@@ -106,7 +106,7 @@ def main():
                 print(win_msg)
                 play_again()
             else:
-                # calling the instance methods using the object coder
+                # calling the methods using the object coder
                 coder.calculate_code_hint(secret_code, user_guess)
                 coder.match_position(secret_code, user_guess)
 

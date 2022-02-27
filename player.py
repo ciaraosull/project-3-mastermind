@@ -6,7 +6,7 @@ colorama.init(autoreset=True)
 
 
 class Player:
-    """ 
+    """
     Creates player object and gives it the ability to
     take the user's name, give the choice to the user
     if they want rules displayed,

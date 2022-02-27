@@ -39,7 +39,7 @@ class CodeGenerator:
 
     def calculate_code_hint(self, secret_code, user_guess):
         """
-        Compare user guess againts secret code and provide hints
+        Compare user guess against secret code and provide hints
         """
         code_hint_green = []
         code_hint_orange = []
@@ -47,13 +47,13 @@ class CodeGenerator:
         # check against again on next guess
         guess = list(user_guess)
         code = list(secret_code)
-
+        # Loop through to find exact matches
         for i in range(0, 4):
             if guess[i] == code[i]:
                 code[i] = "-"
                 guess[i] = ""
                 code_hint_green.append(f"{Fore.GREEN}GREEN{Fore.RESET}")
-
+        # Loop through to find exact numbers in wrong position
         for i in range(0, 4):
             if guess[i] in code:
                 matched_position = self.match_position(code, guess[i])

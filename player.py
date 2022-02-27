@@ -7,8 +7,8 @@ colorama.init(autoreset=True)
 
 class Player:
     """ Initialises instance """
-    def __init__(self):
-        pass
+    # def __init__(self):
+    # pass
 
     def get_name(self):
         """
@@ -26,6 +26,7 @@ class Player:
         """
         Validates user input for name
         """
+        # add in if name is equal to just a space too
         # If nothing entered then return error,
         # otherwise accept all characters for name / nickname
         try:

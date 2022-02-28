@@ -18,7 +18,8 @@ class CodeGenerator:
     # def __init__(self):
     #    pass
 
-    def random_code(self, max_range):
+    @staticmethod
+    def random_code(max_range):
         """
         Generate random secret code here
         """
@@ -29,7 +30,8 @@ class CodeGenerator:
             random_nums.append(random.randint(1, max_range))
         return random_nums
 
-    def match_position(self, secret_code, user_guess):
+    @staticmethod
+    def match_position(secret_code, user_guess):
         """
         Finds the position of the matched numbers
         """

@@ -348,7 +348,7 @@ The [solution]( https://stackoverflow.com/questions/33292644/how-to-add-the-numb
 
     ![Code Hint Colour](/assets/images/code-hint-colour.png)
 
-*   After some [reseach](https://stackoverflow.com/questions/67172409/is-there-a-way-to-color-individual-elements-in-a-list-in-python), it was realised that as lists don't have a concept of colour.  To make the list print with certain colours for each GREEN & ORANGE I needed to print each item in the list.  
+*   After some [research](https://stackoverflow.com/questions/67172409/is-there-a-way-to-color-individual-elements-in-a-list-in-python), it was realised that as lists don't have a concept of colour.  To make the list print with certain colours for each GREEN & ORANGE I needed to print each item in the list.  
 
 *   To do this 2 new lists were made, 1 for GREEN and 1 for ORANGE.  Then append and join both lists.  The Code Hint variable is now taking each item in the list looped through so colorama works on print.
 

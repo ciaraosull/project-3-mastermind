@@ -194,6 +194,8 @@ Throughout this project, I have opted to use Object Oriented Programming. From t
 
 The classes and their associated methods are stored in separate files to allow for separating the code into parts that hold related data and functionality.  This will allow any future expansion and development of this project to have a clear structure and also for any code re-use and sharing as well as maintenance.
 
+Some @staticmethods were used in both classes.  Although these methods could be stand alone functions, after research and careful consideration, it was decided that to communicate clearly about the classes architecture and the intent behind the classes designs that they should be grouped within the classes as static methods.
+
 ![Class Diagram](assets/images/class-diagram.png)
 
 

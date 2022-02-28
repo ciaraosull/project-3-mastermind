@@ -1,6 +1,6 @@
 """ Mastermind Game imports """
-# import pyfiglet module for ascii art
-import pyfiglet
+# import os to help clear terminal for user on replay
+import os
 
 # import player class
 from player import Player
@@ -8,8 +8,8 @@ from player import Player
 # import CodeGenerator class
 from coder import CodeGenerator
 
-# import os to help clear terminal for user on replay
-import os
+# import pyfiglet module for ascii art
+import pyfiglet
 
 # import colorama for adding colour
 import colorama
@@ -77,9 +77,6 @@ def main():
     # assigning variable secret_code to the method
     # that generates random numbers and pass through max range of 10
     secret_code = coder.random_code(10)
-
-    # for testing only take away print at end
-    print(f"The secret code is {secret_code}")
 
     # Handle guess count for order of running
     guess_left = 10

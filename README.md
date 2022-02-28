@@ -416,6 +416,8 @@ Some helpful tutorials I used to help me with coding some of the design ideas we
 
 Some resources that helped fix particular issues or learn to impliment specific features were:
 
+*   [How to Use Python Classes Effectively](https://towardsdatascience.com/how-to-use-python-classes-effectively-10b42db8d7bd)
+
 *   [PEP8 Style Guide for Phyton](https://www.python.org/dev/peps/pep-0008/#imports)
 
 *   [Instance, Class, and Static Methods](https://realpython.com/instance-class-and-static-methods-demystified/)

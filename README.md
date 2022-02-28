@@ -278,7 +278,7 @@ The random library was imported to access the built-in method of generating a ra
     * Play Again
     As mentioned above in the Features section.  To play again the user can type Y or N.  This was tested for lower and uppercase Y and N to check both worked.  Other inputs such as numbers, random words or letters and the enter key pressed were all checked to ensure the errors were handled correctly and appropriate feedback to the user was given.
 
-*   The README.md was proofread and all links were checked before final submission.
+*   The README.md was proofread, passed through [Grammarly](https://www.grammarly.com/grammar-check) and all links were checked before final submission.
 
 
 ### Interesting Issues & Bugs Found

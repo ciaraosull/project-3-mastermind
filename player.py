@@ -28,7 +28,8 @@ class Player:
                 print("Have you got what it takes to break the code!\n")
                 break
 
-    def validate_data(self, name):
+    @staticmethod
+    def validate_data(name):
         """
         Validates user input for name
         """
@@ -111,7 +112,8 @@ class Player:
 
         return guess
 
-    def validate_guess_input(self, values):
+    @staticmethod
+    def validate_guess_input(values):
         """
         Validates the users input guess to be only 4 numbers and between 1-10
         """

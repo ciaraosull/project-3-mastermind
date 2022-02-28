@@ -4,11 +4,11 @@ Mastermind - Code-Breaker, is a Python terminal game that runs on Heroku.
 
 View the live project [Here](https://mastermind-code-breaker.herokuapp.com)
 
-This game is based on the board game of [Mastermind]( https://en.wikipedia.org/wiki/Mastermind_(board_game)) from the 1970’s, which is actually based on an even older paper and pencil game called Bulls & Cows.
+This game is based on the board game of [Mastermind]( https://en.wikipedia.org/wiki/Mastermind_(board_game)) from the 1970s, which is based on an even older paper and pencil game called Bulls & Cows.
 
 This game was chosen as it seems it would appeal to the target audience of adults seeking to play an online strategy game for a fun challenge and cognitive stimulation.
 
-According to [Barrow Neurological Institute](https://www.barrowneuro.org/centers-programs/neurorehabilitation/resources/neuro-rehabilitation-apps-and-games/) The Mastermind board game can be used for planning, problem solving, and decision making.  Also, according to [Strom & Barolo (2011)](https://www.researchgate.net/publication/49785492_Using_the_Game_of_Mastermind_to_Teach_Practice_and_Discuss_Scientific_Reasoning_Skills) the Mastermind board game has been adapted for applications in fields such as Maths, Computing and Psychology and used as a tool for teaching logic.  They argue that it can also be utilised to teach topics relevant to the Life Sciences such as experimental design, hypothesis testing, interpreting results and use of controls.
+According to [Barrow Neurological Institute](https://www.barrowneuro.org/centers-programs/neurorehabilitation/resources/neuro-rehabilitation-apps-and-games/) The Mastermind board game can be used for planning, problem-solving, and decision making.  Also, according to [Strom & Barolo (2011)](https://www.researchgate.net/publication/49785492_Using_the_Game_of_Mastermind_to_Teach_Practice_and_Discuss_Scientific_Reasoning_Skills) the Mastermind board game has been adapted for applications in fields such as Maths, Computing and Psychology and used as a tool for teaching logic.  They argue that it can also be utilised to teach topics relevant to the Life Sciences such as experimental design, hypothesis testing, interpreting results and use of controls.
 
 ## How To Play
 
@@ -20,7 +20,7 @@ In this game Mastermind – Code Breaker, users play to crack the secret code ra
 
 * After every attempt (unless successful) the player is given a code hint.  Every GREEN represents how many numbers were correct and in the correct position.  Every ORANGE represents how many numbers were correct but in the incorrect position.  
 
-* The code hint of GREENs and ORANGEs do not match the order of the players numbers in their guess to make the game more challenging.
+* The code hint of GREENs and ORANGEs do not match the order of the player's numbers in their guess to make the game more challenging.
 
 >
 >**For example:**
@@ -41,7 +41,7 @@ In this game Mastermind – Code Breaker, users play to crack the secret code ra
 
 ### User Stories
 
-Target Audience – Adults who want to play an online command line interface strategy game for a fun challenge and cognitive stimulation.
+Target Audience – Adults who want to play an online command-line interface strategy game for a fun challenge and cognitive stimulation.
 
 As a User I want to:
 * play the game clearly across different devices
@@ -53,26 +53,26 @@ As a User I want to:
 * have the choice to easily play again or quit
 
 ### User Experience in this Game
-This game takes the users' stories mentioned above into consideration to create a positive UX.  The users experience is discussed in more detail below with examples in the Design & Features Sections.
+This game takes the users' stories mentioned above into consideration to create a positive UX.  The user's experience is discussed in more detail below with examples in the Design & Features Sections.
 
 ## Features
 
 **Title Section:**
 
-* [Pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/#:~:text=pyfiglet%20takes%20ASCII%20text%20and,pyfiglet%20module%20%3A%20pip%20install%20pyfiglet) was installed and import pyfiglet was used to generate ascii art for the title and subtitle of the game.
+* [Pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/#:~:text=pyfiglet%20takes%20ASCII%20text%20and,pyfiglet%20module%20%3A%20pip%20install%20pyfiglet) was installed and import pyfiglet was used to generate ASCII art for the title and subtitle of the game.
 
 * Standard Font was used for the title as it is large and has nice spacing and clarity of letters.  This was to give the user clarity of what the game is called.  It was centred to give a nice clean layout too.
 
 * For the subtitle the font used was digital.  Although not as clear as the standard font, it was used for fun and uniqueness to give the user the feeling of the letters being 'locked-in' to compliment the theme of the game.
 
-* The authour's name was centred too to separate it from the game play area and coloured using Coolor to help it stand out and make the first part of the game bright for the user.
+* The author's name was centred too to separate it from the gameplay area and coloured using Coolor to help it stand out and make the first part of the game bright for the user.
 
 * A friendly message to the user to enter their name is seen first. This alerts the user on how to start playing the game.
 
 
     ![Title](assets/images/title_screenshot.png)
 
-* However, if the user presses enter without inputting a name an error will appear.  This game will accept any characters or numbers for a name as the user may wish to use a nickname or a fun made up name.  However, if nothing at all is entered then the user is shown a message in red to highlight to them that nothing was entered and instructions on what to do and to try enter a name again.
+* However, if the user presses enter without inputting a name an error will appear.  This game will accept any characters or numbers for a name as the user may wish to use a nickname or fun made-up name.  However, if nothing at all is entered then the user is shown a message in red to highlight to them that nothing was entered and instructions on what to do and to try to enter a name again.
 
     ![Name Error](/assets/images/name-error-screensht.png)
 
@@ -84,7 +84,7 @@ This game takes the users' stories mentioned above into consideration to create 
 
     ![Name Screen](/assets/images/name-screenshot.png)
 
-* However, if the user presses anything other than inputting R or P an error will appear.  This game will accept capital R or small r and capital P or small p because the user's input is changed to lowercase when inputted by using the .lower method.  The error message is in red to highlight to them that what was entered was incorrect and instructions on what to do and to try enter R or P again.
+* However, if the user presses anything other than inputting R or P an error will appear.  This game will accept capital R or small r and capital P or small p because the user's input is changed to lowercase when inputted by using the .lower method.  The error message is in red to highlight to them that what was entered was incorrect and instructions on what to do and to try to enter R or P again.
 
     ![Rules Error Screenshot](/assets/images/rules-error-screenshot.png)
 
@@ -102,20 +102,20 @@ This game takes the users' stories mentioned above into consideration to create 
 
 *  When the user enters their 4 number guess their guess is printed back to them as a list with the code hint underneath.  This was decided on as it gives clear feedback to the user what they entered and positions it on top of the code hint to keep it structured and clear as to what the guess and hints are.
 
-*   The code hint may be a mix of GREEN and ORANGE words with background colour matching.  Green was chosen as the colour that denotes correct.  So GREEN code hint represents a correct number in correct position.  Orange was chosen as the colour denotes not quite correct but not incorrect.  So ORANGE code hint represents a correct number but in an incorrect position.
+*   The code hint may be a mix of GREEN and ORANGE words with background colour matching.  Green was chosen as the colour that denotes correct.  So GREEN code hint represents a correct number in the correct position.  Orange was chosen as the colour denotes not quite correct but not incorrect.  So ORANGE code hint represents a correct number but in an incorrect position.
 
 *   The player is not informed as to which number/s are incorrect or correct as this would make the game easier.
 
-*   Only if none of the 4 numbers are entered correctly, then the player is informed of this by a message in red lettering.  This is to prevent an empty code hint appearing, which may cause the player to think the game is not working correctly.
+*   Only if none of the 4 numbers are entered correctly, then the player is informed of this by a message in red lettering.  This is to prevent an empty code hint from appearing, which may cause the player to think the game is not working correctly.
 
-*   Also, after the code hint the user is informed each time, how many attempts they have left to guess.  This is highlighted in red to make it clear and stand out.
+*   Also, after the code hint, the user is informed each time, how many attempts they have left to guess.  This is highlighted in red to make it clear and stand out.
 
     ![Guess Input Screenshot](/assets/images/guess-input-screenshot.png)
 
 
 **User Guess Input Validation & Feedback**
 
-The game will accept the users guess in the form of 4 numbers between 1-10 separated by a space.
+The game will accept the user's guess in the form of 4 numbers between 1-10 separated by a space.
 
 *   If the user happens to make an extra space at the beginning or end of their guess, this is handled by using the .strip() method.  This will automatically strip the white spaces from the beginning and end of the input without raising the alarm to the user that their input was entered incorrectly.
 
@@ -136,7 +136,7 @@ The game will accept the users guess in the form of 4 numbers between 1-10 separ
 
 **Game Won**
 
-* If the user guesses correctly before their 10 attempts are up, a Winner message displays.  The standard ascii front from pyfiglet is used to display this message as it is big and compliments the title at the start of the game.
+* If the user guesses correctly before their 10 attempts are up, a Winner message displays.  The standard ASCII front from pyfiglet is used to display this message as it is big and compliments the title at the start of the game.
 
     ![Winner Screenshot](/assets/images/winner-screenshot.png)
 
@@ -150,25 +150,25 @@ The game will accept the users guess in the form of 4 numbers between 1-10 separ
 
 ![Quit Game Screenshot](/assets/images/quit-game.png)
 
-* If the user decides to play again then they are taken back to the start.  In case the player needs to view the rules again or there is another person wanting to play next, the start of the game will allow for any of these scenarios by asking for name and giving the choice to view the rules again.
+* If the user decides to play again then they are taken back to the start.  In case the player needs to view the rules again or there is another person wanting to play next, the start of the game will allow for any of these scenarios by asking for a name and giving the choice to view the rules again.
 
 * Import os was used to create a function using the os.system("clear") method to clear the screen on play gain for the user.  This helps to ensure the screen is cleared of the old game making it easier to read and better structure for the user.  
 
-* A message saying You Chose Yes! Let's Play is printed to validate the user’s response and showing the start of a new game.
+* A message saying You Chose Yes! Let's Play is printed to validate the user’s response and show the start of a new game.
 
 ![Play Again Screenshot](/assets/images/play-again-screenshot.png)
 
 ### Future Development & Features Left to Implement
 
-* This game is a one-player versus the computer.  In style with the old Mastermind Board Game version this game could be made into a 2 player game.  As with the Board Game version the first player makes the code for the second player to guess.  After that player has won or lost, it is then their turn to create the code for the other player to now attempt to guess.  This could be easily implemented with the code already laid down.  Minor changes to the CodeGenerator class could be implemented to allow for another player to enter the secret code instead of the computer randomly generating one.  The players input would need to be validated that it meets the correct criteria.
+* This game is a one-player versus the computer.  In style with the old Mastermind Board Game version, this game could be made into a 2 player game.  As with the Board Game version the first player makes the code for the second player to guess.  After that player has won or lost, it is then their turn to create the code for the other player to now attempt to guess.  This could be easily implemented with the code already laid down.  Minor changes to the CodeGenerator class could be implemented to allow for another player to enter the secret code instead of the computer randomly generating one.  The player's input would need to be validated that it meets the correct criteria.
 
-* This game does not give the option yet to show high scores.  One approach could be implement a Google Spreadsheet to store the amount of attempts it took for each name entered.  This scoreboard could then be displayed by printing the contents of it to the terminal.
+* This game does not give the option yet to show high scores.  One approach could be to implement a Google Spreadsheet to store the number of attempts it took for each name entered.  This scoreboard could then be displayed by printing the contents of it to the terminal.
 
 * Other versions of the game could be implemented such as using colours for the secret code as in the Board Game style or using letters that correspond to words such as a Hangman or Wordle style game.
 
-* To make this game harder for different levels more numbers could be added to the secret code or less attempts given.  To make the game easier the player could be told which numbers are incorrect in the code hint by using the RED hint.
+* To make this game harder for different levels more numbers could be added to the secret code or fewer attempts given.  To make the game easier the player could be told which numbers are incorrect in the code hint by using the RED hint.
 
-* This game was designed and created for the target audience of adults.  However, during testing some children aged 5 - 9 were given the opportunity to test and play.  With some minor changes to the instructions making them more easily interpreted for children of this age group, this game could be modified to reach a wider aged target audience.
+* This game was designed and created for the target audience of adults.  However, during testing, some children aged 5 - 9 were given the opportunity to test and play.  With some minor changes to the instructions making them more easily interpreted for children of this age group, this game could be modified to reach a wider aged target audience.
 
 
 ### Data Model Design
@@ -177,9 +177,9 @@ The game will accept the users guess in the form of 4 numbers between 1-10 separ
 
 Unified Modelling Language (UML) was used to visualize the various features of the game. 
 
-* A Use Case Diagram was drafted to capture the games functionality and relationships with the user.
+* A Use Case Diagram was drafted to capture the game's functionality and relationships with the user.
 
-* The Mastermind Game is the system represented by the rectangle below.  The external object is the Primary Actor.  In this game it will be the Player that initiates the use of the system.
+* The Mastermind Game is the system represented by the rectangle below.  The external object is the Primary Actor.  In this game, it will be the Player that initiates the use of the system.
 
 * The Use Case in the diagram below are represented in circles and these are the actions that will initiate different tasks within the game.
 
@@ -190,11 +190,11 @@ Unified Modelling Language (UML) was used to visualize the various features of t
 
 **Classes**
 
-Throughout this project, I have opted to use Object Oriented Programming. From the Use Case Diagram the Classes were created.  The game consists of two classes, the Player & the CodeGenerator.  Both of these classes have associated methods.  The class diagram below was used to decide what each class does and then design the methods each class should have.
+Throughout this project, I have opted to use Object-Oriented Programming. From the Use Case Diagram, the Classes were created.  The game consists of two classes, the Player & the CodeGenerator.  Both of these classes have associated methods.  The class diagram below was used to decide what each class does and then design the methods each class should have.
 
 The classes and their associated methods are stored in separate files to allow for separating the code into parts that hold related data and functionality.  This will allow any future expansion and development of this project to have a clear structure and also for any code re-use and sharing as well as maintenance.
 
-Some @staticmethods were used in both classes.  Although these methods could be stand alone functions, after research and careful consideration, it was decided that to communicate clearly about the classes architecture and the intent behind the classes designs that they should be grouped within the classes as static methods.
+Some @staticmethods were used in both classes.  Although these methods could be stand-alone functions, after research and careful consideration, it was decided that to communicate clearly about the classes architecture and the intent behind the class designs they should be grouped within the classes as static methods.
 
 ![Class Diagram](assets/images/class-diagram.png)
 
@@ -208,9 +208,9 @@ To design the order in which individual statements, instructions or function cal
 ### Aesthetic Design
 
 **Fonts**
-[Pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/#:~:text=pyfiglet%20takes%20ASCII%20text%20and,pyfiglet%20module%20%3A%20pip%20install%20pyfiglet) was installed and import pyfiglet was used to generate ascii art for the game.  Pyfiglet was added to requirements.txt then for deployment to Heroku.
+[Pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/#:~:text=pyfiglet%20takes%20ASCII%20text%20and,pyfiglet%20module%20%3A%20pip%20install%20pyfiglet) was installed and import pyfiglet was used to generate ASCII art for the game.  Pyfiglet was added to requirements.txt then for deployment to Heroku.
 
-The ascii art was chosen for readability for the user from [Figlet.org](http://www.figlet.org/)
+The ASCII art was chosen for readability for the user from [Figlet.org](http://www.figlet.org/)
 
 **Fonts used were:**
 
@@ -221,19 +221,19 @@ The ascii art was chosen for readability for the user from [Figlet.org](http://w
 **Colour**
 To change the font colour and background colour of some words [Colorama](https://pypi.org/project/colorama/) was imported.  Colorama was added to requirements.txt then for deployment.  
 
-A mix of yellow, green, blue and red was used to keep the game play interesting and as a visual que to user for certain feedback.
+A mix of yellow, green, blue and red was used to keep the gameplay interesting and as a visual cue to users for certain feedback.
 
 ## Libraries & Technology Used
 
-**Built in Python Libraries**
+**Built-in Python Libraries**
 
 *   os
 
-The os library was imported to create a function to utilise the os.system to clear the terminal.  This supports a positive user experience on game replay by clearing the previous game play and making the screen clearer and more structured.
+The os library was imported to create a function to utilise the os.system to clear the terminal.  This supports a positive user experience on game replay by clearing the previous gameplay and making the screen clearer and more structured.
 
 *   random
 
-The random library was imported to access the built in method of generating a random number selection using the randint() method.  This then is used to generate a random sequence of 4 numbers from a range of 1 – 10 for the secret code the user has to crack.
+The random library was imported to access the built-in method of generating a random number selection using the randint() method.  This then is used to generate a random sequence of 4 numbers from a range of 1 – 10 for the secret code the user has to crack.
 
 **Other**
 * [Colorama](https://pypi.org/project/colorama/) for adding colour to fonts.
@@ -249,36 +249,36 @@ The random library was imported to access the built in method of generating a ra
 
 *   Any testing user inputs were printed back to the console to check all functions and methods were correctly applied to the input.  
 
-*   Errors or warnings were fixed as they appeared such as indentation errors, lines too long or extra space issues.  This helped keep the code clean and readable so other errors or bugs that arose where identified more easily.
+*   Errors or warnings were fixed as they appeared such as indentation errors, lines too long or extra space issues.  This helped keep the code clean and readable so other errors or bugs that arose were identified more easily.
 
-*   After deployment all features were checked on laptop, mobile (Samsung Galaxy & iPhone 8). The site was sent to peers to check from their devices that all features functioned correctly and feedback on functionality was positive across all devices checked such as PC, Laptop, Tablets and Mobiles (Android & IOS). The website was checked on Chrome, Firefox and Edge.
+*   After deployment all features were checked on a laptop, mobile (Samsung Galaxy & iPhone 8). The site was sent to peers to check from their devices that all features functioned correctly and feedback on functionality was positive across all devices checked such as PC, Laptop, Tablets and Mobiles (Android & IOS). The website was checked on Chrome, Firefox and Edge.
 
 *   The game was deployed early on in development and checked regularly to ensure game flow and any errors were handled early on.
 
 *   Testing inputs were used to ensure user inputs would be handled correctly and appropriate feedback to the user was shown on screen.  As mentioned above in the Features Section for how user inputs were handled.
 
     *   User Name:
-    As this will accept anything but nothing entered, the enter key was pressed to ensure error caught and handled appropriately.
+    As this will accept anything but nothing entered, the enter key was pressed to ensure error was caught and handled appropriately.
 
     *   Player Choice:
     To test capital and small R and P were typed in and also other random inputs such as spaces, other letters, words or numbers to ensure error caught and handled appropriately.
 
     *   Player Guess:
-    As this will only accept 4 numbers between 1-10 separated by a space, many other combinations of input were tested.  For example, more or less numbers were entered, numbers less than 1 or greater than 10 were entered.  Numbers without spaces or extra spaces and also random special characters and no entry at all were all tested to ensure errors caught and handled appropriately.
+    As this will only accept 4 numbers between 1-10 separated by a space, many other combinations of input were tested.  For example, more or fewer numbers were entered, numbers less than 1 or greater than 10 were entered.  Numbers without spaces or extra spaces and also random special characters and no entry at all were all tested to ensure errors were caught and handled appropriately.
 
     *   Code Hint:
-    The secret code was printed to the terminal during development to help with testing the code hint generated matched the players guesses.  It was checked to ensure numbers in correct position generated a GREEN hint and numbers in incorrect position generated ORANGE hint.  If all 4 numbers were not correct the message in red appeared as expected.
+    The secret code was printed to the terminal during development to help with testing the code hint generated matched the player's guesses.  It was checked to ensure numbers in the correct position generated a GREEN hint and numbers in incorrect position generated an ORANGE hint.  If all 4 numbers were not correct the message in red appeared as expected.
 
     *   Attempts Left:
     Attempts left was checked by playing the game through to see if guesses left decreased by 1 each time and also that guesses left did not change if an input error was entered.
 
     *   Game Won / Game Lost
-    The game was tested on winning and loosing to ensure the correct messages were displayed for both.
+    The game was tested on winning and losing to ensure the correct messages were displayed for both.
 
     * Play Again
     As mentioned above in the Features section.  To play again the user can type Y or N.  This was tested for lower and uppercase Y and N to check both worked.  Other inputs such as numbers, random words or letters and the enter key pressed were all checked to ensure the errors were handled correctly and appropriate feedback to the user was given.
 
-*   The README.md was proof-read and all links were checked before final submission.
+*   The README.md was proofread and all links were checked before final submission.
 
 
 ### Interesting Issues & Bugs Found
@@ -296,7 +296,7 @@ During testing, it was discovered that when the user entered their guess this er
 
 
 The [solution]( https://stackoverflow.com/questions/33292644/how-to-add-the-numbers-from-the-user-into-a-list
-) was to the split() method to convert the users input string to a list by splitting it on the spaces between.  To convert the string then to integers the map() method was used.
+) was to the split() method to convert the user's input string to a list by splitting it on the spaces between.  To convert the string then to integers the map() method was used.
 
 >
 >       guess = list(map(int, input(""Please Enter your guess:").split(',')))
@@ -304,9 +304,9 @@ The [solution]( https://stackoverflow.com/questions/33292644/how-to-add-the-numb
 
 2.  **Code Hint - Find Position Function**
 
-*   There were a few approaches to take with this game and how to generate a Code Hint.  I decided on taking the users guess and the code hint and loop through to compare anything that matched.  If the number matched then a '-' was replaced in one list and a ' ' replaced in the other so there was no confusion of the symbols matching during the loop.  For every match GREEN was placed in the new code list using the .append() method.  
+*   There were a few approaches to take with this game and how to generate a Code Hint.  I decided on taking the user's guess and the code hint and looping through to compare anything that matched.  If the number matched then a '-' was replaced in one list and a ' ' replaced in the other so there was no confusion of the symbols matching during the loop.  For every match, GREEN was placed in the new code list using the .append() method.  
 
-*   However, a problem arose then trying to use this logic to loop through to find a matched number in the incorrect position.  It was only finding some matched numbers in the incorrect position not all of them.  The solution was to create a separate function to loop through.  This function was then used to check against each one of the numbers in the users guess.  The same logic then applied to replace with '-' or ' ' and append ORANGE to the new code hint list.
+*   However, a problem arose when trying to use this logic to loop through to find a matched number in the incorrect position.  It was only finding some matched numbers in the incorrect position not all of them.  The solution was to create a separate function to loop through.  This function was then used to check against each one of the numbers in the user's guess.  The same logic then applied to replace with '-' or ' ' and append ORANGE to the new code hint list.
 
 >
 > From line 160:
@@ -331,7 +331,7 @@ The [solution]( https://stackoverflow.com/questions/33292644/how-to-add-the-numb
 
 3. **Code Hint & Guess Lists**
 
-*   After the user made their first guess, every guess after that was returning an empty code hint list.  The problem was  the code hint list was empty as nothing was being compared after first check.  The solution was to create 2 new variables to copy back in a list to check against again on next guess.
+*   After the user made their first guess, every guess after that was returning an empty code hint list.  The problem was the code hint list was empty as nothing was being compared after the first check.  The solution was to create 2 new variables to copy back into a list to check against again on the next guess.
 
     ![Code Hint Bug](/assets/images/copy-lists-bug-screenshot.png)
 
@@ -373,7 +373,7 @@ The site was deployed via [Heroku]( https://id.heroku.com/login), and the live l
 
 This project was developed utilising the [Code Institute Template]( https://github.com/Code-Institute-Org/python-essentials-template).  Some of the deployment steps below are specifically required for the new CI template and may not be applicable to older versions, or different projects.
 
-Before deploying to Heroku pip3 freeze > requirements.txt was used to add pyfiglet and colorama imports for deployment.
+Before deploying to Heroku pip3 freeze > requirements.txt was used to add pyfiglet and Colorama imports for deployment.
 
 1.	Log in to [Heroku]( https://id.heroku.com/login) or create an account if required.
 2.	Then, click the button labelled **New** from the dashboard in the top right corner and from the drop-down menu select **Create New App**.
@@ -384,8 +384,8 @@ Before deploying to Heroku pip3 freeze > requirements.txt was used to add pyfigl
 7.	Click **Reveal Config Vars** and enter **port** into the **Key** box and **8000** into the **Value** box and click the **Add** button.
 8.	Next, scroll down to the Buildpack section click **Add Buildpack** select **python** and click **Save Changes**.
 9.	Repeat step 8 to add **node.js**.
-o	**Note:** The Buildpacks must be in the correct order. If not click and drag them to move into correct order.
-10.	Scroll to top of page and now choose the **Deploy** tab.
+o	**Note:** The Buildpacks must be in the correct order. If not click and drag them to move into the correct order.
+10.	Scroll to the top of the page and now choose the **Deploy** tab.
 11.	Select **Github** as the deployment method.
 12.	Confirm you want to connect to GitHub.
 13.	Search for the repository name and click the connect button.

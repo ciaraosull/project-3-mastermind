@@ -1,12 +1,4 @@
 """ Mastermind Game imports """
-# import os to help clear terminal for user on replay
-import os
-
-# import colorama for adding colour
-import colorama
-from colorama import Fore
-colorama.init(autoreset=True)
-
 # import pyfiglet module for ascii art
 import pyfiglet
 
@@ -15,6 +7,14 @@ from player import Player
 
 # import CodeGenerator class
 from coder import CodeGenerator
+
+# import os to help clear terminal for user on replay
+import os
+
+# import colorama for adding colour
+import colorama
+from colorama import Fore
+colorama.init(autoreset=True)
 
 
 def clear():

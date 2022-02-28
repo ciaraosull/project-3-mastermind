@@ -414,6 +414,10 @@ Some helpful tutorials I used to help me with coding some of the design ideas we
 
 Some resources that helped fix particular issues or learn to impliment specific features were:
 
+*   [PEP8 Style Guide for Phyton](https://www.python.org/dev/peps/pep-0008/#imports)
+
+*   [Instance, Class, and Static Methods](https://realpython.com/instance-class-and-static-methods-demystified/)
+
 *   [Difference between staticmethods & classmethods](https://stackoverflow.com/questions/136097/difference-between-staticmethod-and-classmethod/1669524#1669524)
 
 *   [Building Beautiful CLI in Python](https://codeburst.io/building-beautiful-command-line-interfaces-with-python-26c7e1bb54df)

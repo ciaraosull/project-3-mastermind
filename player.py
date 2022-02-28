@@ -13,8 +13,6 @@ class Player:
     take the user's guesses and validate
     all the user's input
     """
-    # def __init__(self):
-    # pass
 
     def get_name(self):
         """
@@ -22,7 +20,7 @@ class Player:
         """
         while True:
             name_data = input("Enter your name here to begin:\n")
-            # pass the name through the validate_data method to check
+            # passes the name through the validate_data method to check
             if self.validate_data(name_data):
                 print("\nWelcome " + Fore.GREEN + f"{name_data}")
                 print("Have you got what it takes to break the code!\n")
@@ -38,7 +36,6 @@ class Player:
         # otherwise accept all characters for name / nickname
         try:
             if len(name.strip()) == 0:
-                # if name == "":
                 raise ValueError("Please input some type of name\n")
 
         except ValueError as error:

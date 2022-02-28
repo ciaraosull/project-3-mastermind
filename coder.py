@@ -15,8 +15,6 @@ class CodeGenerator:
     in the user's guess and the secret code and generates
     the code hint for the user
     """
-    # def __init__(self):
-    #    pass
 
     @staticmethod
     def random_code(max_range):
